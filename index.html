@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="kk">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Өрлеу</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>ORLEU</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,151 +15,408 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Montserrat',sans-serif;
+font-family:Inter,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
 background:#f5f8fc;
-color:#222;
-line-height:1.6;
+color:#1d2939;
 }
 
 header{
-background:linear-gradient(135deg,#0056b3,#1ea7fd);
-color:white;
-padding:100px 20px;
-text-align:center;
-}
-
-header h1{
-font-size:60px;
-margin-bottom:15px;
-}
-
-header p{
-font-size:22px;
-max-width:800px;
-margin:auto;
-}
-
-.btn{
-display:inline-block;
-margin-top:35px;
-padding:15px 35px;
+position:fixed;
+width:100%;
+top:0;
+left:0;
 background:white;
-color:#0056b3;
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+padding:18px 8%;
+z-index:999;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+color:#0d47a1;
+}
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav a{
 text-decoration:none;
-font-weight:bold;
-border-radius:50px;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-4px);
-}
-
-section{
-padding:80px 10%;
-}
-
-.title{
-text-align:center;
-font-size:38px;
-margin-bottom:50px;
-color:#0056b3;
-}
-
-.about{
-max-width:900px;
-margin:auto;
-text-align:center;
-font-size:20px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card h3{
-color:#0056b3;
-margin-bottom:15px;
-font-size:22px;
-}
-
-.advantages{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-text-align:center;
-}
-
-.item{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-font-size:18px;
+color:#333;
 font-weight:600;
 }
 
-.contact{
+.hero{
+
+height:100vh;
+
+background:
+
+linear-gradient(rgba(13,71,161,.75),rgba(25,118,210,.75)),
+
+url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
 text-align:center;
-font-size:20px;
+color:white;
+padding:40px;
+}
+
+.hero h1{
+
+font-size:72px;
+font-weight:800;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:24px;
+max-width:850px;
+margin:auto;
+
+line-height:1.6;
+
+}
+
+.btn{
+
+display:inline-block;
+margin-top:40px;
+
+padding:18px 40px;
+
+background:white;
+color:#0d47a1;
+
+border-radius:12px;
+
+font-weight:700;
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+section{
+
+padding:90px 8%;
+
+}
+
+.title{
+
+text-align:center;
+font-size:42px;
+margin-bottom:60px;
+color:#0d47a1;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h3{
+
+margin-bottom:18px;
+
+font-size:22px;
+
+color:#0d47a1;
+
+}
+
+.card p{
+
+line-height:1.7;
+
+}
+
+.about{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.about img{
+
+width:100%;
+
+border-radius:20px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.about h2{
+
+font-size:42px;
+
+margin-bottom:25px;
+
+color:#0d47a1;
+
+}
+
+.about p{
+
+line-height:1.8;
+
+font-size:18px;
+
+}
+
+.features{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.feature{
+
+background:white;
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.feature h3{
+
+font-size:36px;
+
+margin-bottom:15px;
+
+}
+
+form{
+
+max-width:700px;
+
+margin:auto;
+
+display:grid;
+
+gap:18px;
+
+}
+
+input,select{
+
+padding:18px;
+
+border-radius:10px;
+
+border:1px solid #ddd;
+
+font-size:16px;
+
+}
+
+button{
+
+padding:18px;
+
+background:#0d47a1;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#1565c0;
+
 }
 
 footer{
-background:#0056b3;
+
+background:#0d47a1;
+
 color:white;
+
 text-align:center;
-padding:30px;
-margin-top:50px;
+
+padding:40px;
+
+margin-top:80px;
+
+}
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+.features{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.features{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
 }
 
 </style>
 
 </head>
+
 <body>
 
 <header>
 
-<h1>Өрлеу</h1>
+<nav>
 
-<p>
+<div class="logo">ORLEU</div>
 
-Педагогтердің кәсіби дамуына арналған
-заманауи біліктілікті арттыру бағдарламалары.
+<ul>
 
-</p>
+<li><a href="#">Главная</a></li>
 
-<a href="#courses" class="btn">Курстарды қарау</a>
+<li><a href="#courses">Курсы</a></li>
+
+<li><a href="#about">О нас</a></li>
+
+<li><a href="#register">Регистрация</a></li>
+
+</ul>
+
+</nav>
 
 </header>
 
-<section>
+<section class="hero">
 
-<h2 class="title">Біз туралы</h2>
+<div>
 
-<div class="about">
+<h1>ORLEU</h1>
 
-Өрлеу – педагогтердің кәсіби құзыреттілігін дамытуға арналған
-заманауи білім беру орталығы.
+<p>
 
-Біздің бағдарламалар білім беру жүйесіндегі жаңа талаптарға сәйкес
-әзірленген және тәжірибелік бағытта жүргізіледі.
+Центр повышения квалификации педагогов Республики Казахстан.
+
+Современные образовательные программы для профессионального развития.
+
+</p>
+
+<a href="#courses" class="btn">Наши программы</a>
 
 </div>
 
@@ -165,92 +424,156 @@ margin-top:50px;
 
 <section id="courses">
 
-<h2 class="title">Курстар</h2>
+<h2 class="title">Образовательные программы</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>🏫 Мектепке дейінгі ұйымның заттық кеңістіктік даму ортасын ұйымдастыру</h3>
-<p>Балалардың жан-жақты дамуына қолайлы білім беру ортасын құрудың тиімді тәсілдері.</p>
+<p>Организация современной предметно-развивающей среды в дошкольной организации.</p>
 </div>
 
 <div class="card">
-<h3>👶 Ерекше білім беру қажеттіліктері бар балалармен жұмыс</h3>
-<p>Мектепке дейінгі ұйым жағдайында ерекше білім беру қажеттіліктері бар балалармен тиімді жұмыс ұйымдастыру.</p>
+<h3>👶 Ерекше білім беру қажеттіліктері бар балалармен жұмысты ұйымдастыру</h3>
+<p>Практические методы работы с детьми с особыми образовательными потребностями.</p>
 </div>
 
 <div class="card">
 <h3>♿ Инклюзивті білім беру</h3>
-<p>Инклюзивті білім беруді іске асыратын педагогтердің базалық құзыреттерін қалыптастыру.</p>
+<p>Формирование базовых компетенций педагогов инклюзивного образования.</p>
 </div>
 
 <div class="card">
-<h3>📚 Бастауыш сынып оқушыларының зерттеушілік және жобалық іс-әрекеті</h3>
-<p>Зерттеу жұмыстарын ұйымдастыру және жобалық оқытудың тиімді әдістері.</p>
+<h3>🔬 Зерттеушілік және жобалық іс-әрекеті</h3>
+<p>Развитие исследовательской и проектной деятельности учащихся начальной школы.</p>
 </div>
 
 <div class="card">
 <h3>🌍 Жаһандық құзыреттер</h3>
-<p>Жаһандық ойлау, азаматтық жауапкершілік және қазіргі қоғамдағы маңызды құндылықтарды дамыту.</p>
+<p>Развитие глобальных компетенций и навыков XXI века.</p>
 </div>
 
 <div class="card">
 <h3>🇬🇧 Ағылшын тілін оқытудағы инновациялық технологиялар</h3>
-<p>Цифрлық құралдарды пайдалана отырып ағылшын тілін оқытудың заманауи әдістері.</p>
+<p>Современные технологии преподавания английского языка.</p>
 </div>
 
 <div class="card">
-<h3>👨‍💼 Қазіргі заманғы білім беру ұйымын тиімді басқару</h3>
-<p>Білім беру ұйымдарын басқарудың тиімді стратегиялары және көшбасшылық.</p>
+<h3>🎓 Қазіргі заманғы білім беру ұйымын тиімді басқару</h3>
+<p>Современные подходы к управлению образовательными организациями.</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section id="about">
 
-<h2 class="title">Неліктен біз?</h2>
+<div class="about">
 
-<div class="advantages">
+<img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80">
 
-<div class="item">✔ Тәжірибелі тренерлер</div>
+<div>
 
-<div class="item">✔ Заманауи бағдарламалар</div>
+<h2>О центре ORLEU</h2>
 
-<div class="item">✔ Онлайн оқу</div>
+<p>
 
-<div class="item">✔ Практикалық тапсырмалар</div>
+ORLEU — образовательная платформа повышения квалификации педагогических работников.
 
-<div class="item">✔ Сертификат</div>
+Мы предлагаем современные программы обучения, направленные на развитие профессиональных компетенций, внедрение инновационных образовательных технологий и повышение качества образования.
 
-<div class="item">✔ Жеке қолдау</div>
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<h3>📚</h3>
+
+<p>7 программ</p>
+
+</div>
+
+<div class="feature">
+
+<h3>👩‍🏫</h3>
+
+<p>Опытные преподаватели</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🎓</h3>
+
+<p>Сертификаты</p>
+
+</div>
+
+<div class="feature">
+
+<h3>💻</h3>
+
+<p>Онлайн обучение</p>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<section>
+<section id="register">
 
-<h2 class="title">Байланыс</h2>
+<h2 class="title">Запись на обучение</h2>
 
-<div class="contact">
+<form>
 
-<p><b>Өрлеу</b></p>
+<input placeholder="Имя">
 
-<p>📧 info@orleu.kz</p>
+<input placeholder="Фамилия">
 
-<p>📞 +7 (700) 000-00-00</p>
+<input placeholder="Телефон">
 
-<p>📍 Қазақстан</p>
+<input placeholder="Email">
 
-</div>
+<select>
+
+<option>Выберите программу</option>
+
+<option>Мектепке дейінгі ұйымның заттық кеңістіктік даму ортасын ұйымдастыру</option>
+
+<option>Ерекше білім беру қажеттіліктері бар балалармен жұмысты ұйымдастыру</option>
+
+<option>Инклюзивті білім беру</option>
+
+<option>Зерттеушілік және жобалық іс-әрекеті</option>
+
+<option>Жаһандық құзыреттер</option>
+
+<option>Ағылшын тілін оқытудағы инновациялық технологиялар</option>
+
+<option>Қазіргі заманғы білім беру ұйымын тиімді басқару</option>
+
+</select>
+
+<button>Подать заявку</button>
+
+</form>
 
 </section>
 
 <footer>
 
-© 2025 Өрлеу. Барлық құқықтар қорғалған.
+<h2>ORLEU</h2>
+
+<br>
+
+<p>© 2026 ORLEU. Все права защищены.</p>
 
 </footer>
 
