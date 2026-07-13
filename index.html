@@ -1,86 +1,257 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ORLEU Academy</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Өрлеу</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:#f5f9ff;color:#1f2937}
-header{background:#0d47a1;color:#fff;padding:18px 8%}
-nav{display:flex;justify-content:space-between;align-items:center}
-nav ul{display:flex;gap:24px;list-style:none}
-.hero{display:flex;align-items:center;justify-content:space-between;padding:80px 8%;background:linear-gradient(135deg,#0d47a1,#1976d2);color:#fff}
-.hero-text{max-width:540px}
-.hero h1{font-size:52px;margin-bottom:20px}
-.hero p{font-size:20px;line-height:1.6}
-.btn{display:inline-block;margin-top:30px;background:#fff;color:#0d47a1;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700}
-.hero img{width:480px;border-radius:20px}
-section{padding:70px 8%}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px}
-.card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
-.card h3{margin-bottom:10px}
-form{display:grid;gap:15px;max-width:600px}
-input,select{padding:14px;border:1px solid #ccc;border-radius:8px}
-button{background:#0d47a1;color:#fff;border:none;padding:14px;border-radius:8px;font-weight:700}
-footer{background:#0d47a1;color:#fff;text-align:center;padding:30px}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+body{
+background:#f5f8fc;
+color:#222;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,#0056b3,#1ea7fd);
+color:white;
+padding:100px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:60px;
+margin-bottom:15px;
+}
+
+header p{
+font-size:22px;
+max-width:800px;
+margin:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 35px;
+background:white;
+color:#0056b3;
+text-decoration:none;
+font-weight:bold;
+border-radius:50px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+section{
+padding:80px 10%;
+}
+
+.title{
+text-align:center;
+font-size:38px;
+margin-bottom:50px;
+color:#0056b3;
+}
+
+.about{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#0056b3;
+margin-bottom:15px;
+font-size:22px;
+}
+
+.advantages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.item{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+font-size:18px;
+font-weight:600;
+}
+
+.contact{
+text-align:center;
+font-size:20px;
+}
+
+footer{
+background:#0056b3;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
 </style>
+
 </head>
 <body>
 
 <header>
-<nav>
-<h2>ORLEU Academy</h2>
-<ul>
-<li>Главная</li>
-<li>Курсы</li>
-<li>О нас</li>
-<li>Контакты</li>
-</ul>
-</nav>
+
+<h1>Өрлеу</h1>
+
+<p>
+
+Педагогтердің кәсіби дамуына арналған
+заманауи біліктілікті арттыру бағдарламалары.
+
+</p>
+
+<a href="#courses" class="btn">Курстарды қарау</a>
+
 </header>
 
-<section class="hero">
-<div class="hero-text">
-<h1>Откройте новые возможности для обучения</h1>
-<p>Онлайн-курсы по IT, искусственному интеллекту, дизайну, маркетингу, бизнесу и языкам.</p>
-<a class="btn" href="#courses">Смотреть курсы</a>
+<section>
+
+<h2 class="title">Біз туралы</h2>
+
+<div class="about">
+
+Өрлеу – педагогтердің кәсіби құзыреттілігін дамытуға арналған
+заманауи білім беру орталығы.
+
+Біздің бағдарламалар білім беру жүйесіндегі жаңа талаптарға сәйкес
+әзірленген және тәжірибелік бағытта жүргізіледі.
+
 </div>
-<img src="images/hero/hero.jpg" alt="Hero">
+
 </section>
 
 <section id="courses">
-<h2 style="margin-bottom:25px">Популярные курсы</h2>
+
+<h2 class="title">Курстар</h2>
+
 <div class="cards">
-<div class="card"><h3>Python с нуля</h3><p>Для начинающих.</p></div>
-<div class="card"><h3>ChatGPT и ИИ</h3><p>Использование ИИ в работе.</p></div>
-<div class="card"><h3>UX/UI Design</h3><p>Современный дизайн интерфейсов.</p></div>
-<div class="card"><h3>Digital Marketing</h3><p>Продвижение бизнеса онлайн.</p></div>
+
+<div class="card">
+<h3>🏫 Мектепке дейінгі ұйымның заттық кеңістіктік даму ортасын ұйымдастыру</h3>
+<p>Балалардың жан-жақты дамуына қолайлы білім беру ортасын құрудың тиімді тәсілдері.</p>
 </div>
+
+<div class="card">
+<h3>👶 Ерекше білім беру қажеттіліктері бар балалармен жұмыс</h3>
+<p>Мектепке дейінгі ұйым жағдайында ерекше білім беру қажеттіліктері бар балалармен тиімді жұмыс ұйымдастыру.</p>
+</div>
+
+<div class="card">
+<h3>♿ Инклюзивті білім беру</h3>
+<p>Инклюзивті білім беруді іске асыратын педагогтердің базалық құзыреттерін қалыптастыру.</p>
+</div>
+
+<div class="card">
+<h3>📚 Бастауыш сынып оқушыларының зерттеушілік және жобалық іс-әрекеті</h3>
+<p>Зерттеу жұмыстарын ұйымдастыру және жобалық оқытудың тиімді әдістері.</p>
+</div>
+
+<div class="card">
+<h3>🌍 Жаһандық құзыреттер</h3>
+<p>Жаһандық ойлау, азаматтық жауапкершілік және қазіргі қоғамдағы маңызды құндылықтарды дамыту.</p>
+</div>
+
+<div class="card">
+<h3>🇬🇧 Ағылшын тілін оқытудағы инновациялық технологиялар</h3>
+<p>Цифрлық құралдарды пайдалана отырып ағылшын тілін оқытудың заманауи әдістері.</p>
+</div>
+
+<div class="card">
+<h3>👨‍💼 Қазіргі заманғы білім беру ұйымын тиімді басқару</h3>
+<p>Білім беру ұйымдарын басқарудың тиімді стратегиялары және көшбасшылық.</p>
+</div>
+
+</div>
+
 </section>
 
 <section>
-<h2 style="margin-bottom:20px">Запись на курс</h2>
-<form>
-<input placeholder="Имя">
-<input placeholder="Фамилия">
-<input placeholder="Телефон">
-<select>
-<option>Выберите курс</option>
-<option>Python</option>
-<option>ChatGPT и ИИ</option>
-<option>UX/UI Design</option>
-<option>Digital Marketing</option>
-</select>
-<button>Записаться</button>
-</form>
+
+<h2 class="title">Неліктен біз?</h2>
+
+<div class="advantages">
+
+<div class="item">✔ Тәжірибелі тренерлер</div>
+
+<div class="item">✔ Заманауи бағдарламалар</div>
+
+<div class="item">✔ Онлайн оқу</div>
+
+<div class="item">✔ Практикалық тапсырмалар</div>
+
+<div class="item">✔ Сертификат</div>
+
+<div class="item">✔ Жеке қолдау</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Байланыс</h2>
+
+<div class="contact">
+
+<p><b>Өрлеу</b></p>
+
+<p>📧 info@orleu.kz</p>
+
+<p>📞 +7 (700) 000-00-00</p>
+
+<p>📍 Қазақстан</p>
+
+</div>
+
 </section>
 
 <footer>
-<p>© 2026 ORLEU Academy</p>
+
+© 2025 Өрлеу. Барлық құқықтар қорғалған.
+
 </footer>
 
 </body>
