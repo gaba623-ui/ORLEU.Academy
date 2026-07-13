@@ -372,7 +372,28 @@ display:none;
 
 }
 
+.language-switch{
+display:flex;
+gap:10px;
 }
+
+.lang-btn{
+padding:8px 14px;
+border:none;
+border-radius:8px;
+background:#0d47a1;
+color:white;
+cursor:pointer;
+font-size:14px;
+font-weight:600;
+transition:.3s;
+}
+
+.lang-btn:hover{
+background:#1565c0;
+transform:translateY(-2px);
+}    
+
 
 </style>
 
@@ -388,21 +409,23 @@ display:none;
 
 <ul>
 
-<li><a href="#">Главная</a></li>
+<li><a href="#" id="navHome">Главная</a></li>
 
-<li><a href="#courses">Курсы</a></li>
+<li><a href="#courses" id="navCourses">Курсы</a></li>
 
-<li><a href="#about">О нас</a></li>
+<li><a href="#about" id="navAbout">О нас</a></li>
 
-<li><a href="#register">Регистрация</a></li>
+<li><a href="#register" id="navRegister">Регистрация</a></li>
 
 </ul>
 
 <div class="language-switch">
 
-<button onclick="setLanguage('kz')">🇰🇿 KZ</button>
+<button class="lang-btn" onclick="setLanguage('kz')">🇰🇿 KZ</button>
 
-<button onclick="setLanguage('ru')">🇷🇺 RU</button>
+<button class="lang-btn" onclick="setLanguage('ru')">🇷🇺 RU</button>
+
+</div>
     
 </nav>
 
@@ -585,3 +608,25 @@ ORLEU — образовательная платформа повышения �
 </div>
 </body><script src="js/language.js"></script>
 </html>
+
+.language-switch{
+display:flex;
+gap:10px;
+}
+
+.lang-btn{
+padding:8px 14px;
+border:none;
+border-radius:8px;
+background:#0d47a1;
+color:white;
+cursor:pointer;
+font-size:14px;
+font-weight:600;
+transition:.3s;
+}
+
+.lang-btn:hover{
+background:#1565c0;
+transform:translateY(-2px);
+}
