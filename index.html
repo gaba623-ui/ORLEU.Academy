@@ -621,6 +621,292 @@
                 font-size: 14px;
             }
         }
+    
+
+        /* Мобильное боковое меню */
+        .nav-panel {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .menu-toggle,
+        .menu-close,
+        .menu-overlay {
+            display: none;
+        }
+
+        .menu-toggle {
+            width: 46px;
+            height: 42px;
+            padding: 10px;
+            border: 0;
+            border-radius: 11px;
+            background: #0d47a1;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            border-radius: 999px;
+            background: #fff;
+            transition: transform .25s ease, opacity .25s ease;
+        }
+
+        /* Красивое уведомление */
+        .success-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity .25s ease, visibility .25s ease;
+        }
+
+        .success-modal.open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .success-modal__overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(7, 24, 50, .65);
+            backdrop-filter: blur(5px);
+        }
+
+        .success-modal__content {
+            position: relative;
+            z-index: 1;
+            width: min(440px, 100%);
+            padding: 36px 28px 30px;
+            border-radius: 24px;
+            background: #fff;
+            text-align: center;
+            box-shadow: 0 28px 80px rgba(0, 0, 0, .28);
+            transform: translateY(24px) scale(.95);
+            transition: transform .25s ease;
+        }
+
+        .success-modal.open .success-modal__content {
+            transform: translateY(0) scale(1);
+        }
+
+        .success-modal__icon {
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #e9f8ef;
+            color: #1f9d55;
+            font-size: 44px;
+            font-weight: 800;
+        }
+
+        .success-modal.error .success-modal__icon {
+            background: #fff0f0;
+            color: #d9363e;
+        }
+
+        .success-modal__content h2 {
+            margin-bottom: 12px;
+            color: #0d47a1;
+            font-size: 27px;
+            line-height: 1.25;
+        }
+
+        .success-modal.error .success-modal__content h2 {
+            color: #b4232c;
+        }
+
+        .success-modal__content p {
+            color: #52606d;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .success-modal__button {
+            min-width: 150px;
+            margin-top: 24px;
+            padding: 13px 26px;
+            border: 0;
+            border-radius: 11px;
+            background: #0d47a1;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .25s;
+        }
+
+        .success-modal__button:hover {
+            background: #1565c0;
+            transform: translateY(-2px);
+        }
+
+        body.modal-open,
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        @media screen and (max-width: 600px) {
+            header {
+                position: sticky;
+                top: 0;
+                padding: 10px 14px;
+            }
+
+            nav {
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+
+            .logo {
+                width: auto;
+                justify-content: flex-start;
+            }
+
+            .logo img {
+                height: 48px;
+                max-width: 190px;
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-shrink: 0;
+            }
+
+            .menu-overlay {
+                display: block;
+                position: fixed;
+                inset: 0;
+                z-index: 1998;
+                background: rgba(5, 20, 45, .55);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .28s ease, visibility .28s ease;
+            }
+
+            .menu-overlay.open {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-panel {
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 1999;
+                width: min(330px, 86vw);
+                height: 100dvh;
+                padding: 82px 22px 28px;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 24px;
+                background: #fff;
+                box-shadow: -18px 0 50px rgba(0, 0, 0, .18);
+                transform: translateX(105%);
+                transition: transform .3s ease;
+                overflow-y: auto;
+            }
+
+            .nav-panel.open {
+                transform: translateX(0);
+            }
+
+            .menu-close {
+                display: flex;
+                position: absolute;
+                top: 18px;
+                right: 18px;
+                width: 42px;
+                height: 42px;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                border: 0;
+                border-radius: 11px;
+                background: #eef4ff;
+                color: #0d47a1;
+                font-size: 31px;
+                line-height: 1;
+                cursor: pointer;
+            }
+
+            .nav-panel ul {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .nav-panel li {
+                width: 100%;
+            }
+
+            .nav-panel a {
+                display: block;
+                width: 100%;
+                padding: 14px 16px;
+                border-radius: 12px;
+                background: #f5f8fc;
+                color: #1d2939;
+                text-align: left;
+                font-size: 16px;
+            }
+
+            .nav-panel a:hover {
+                background: #e8f1ff;
+                color: #0d47a1;
+                transform: none;
+            }
+
+            .nav-panel .language-switch {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin-top: auto;
+            }
+
+            .nav-panel .lang-btn {
+                width: 100%;
+                padding: 12px 10px;
+                font-size: 14px;
+            }
+
+            .success-modal__content {
+                padding: 30px 20px 24px;
+                border-radius: 20px;
+            }
+
+            .success-modal__content h2 {
+                font-size: 23px;
+            }
+
+            .success-modal__icon {
+                width: 66px;
+                height: 66px;
+                font-size: 38px;
+            }
+        }
+
     </style>
 </head>
 
@@ -632,43 +918,58 @@
             <img src="js/images/Logo 2.png" alt="ORLEU">
         </div>
 
-        <ul>
-            <li>
-                <a href="#" id="navHome">Главная</a>
-            </li>
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-            <li>
-                <a href="#courses" id="navCourses">Курсы</a>
-            </li>
-
-            <li>
-                <a href="#about" id="navAbout">О нас</a>
-            </li>
-
-            <li>
-                <a href="#register" id="navRegister">Регистрация</a>
-            </li>
-        </ul>
-
-        <div class="language-switch">
+        <div class="nav-panel" id="mobileMenu">
             <button
+                class="menu-close"
+                id="menuClose"
                 type="button"
-                class="lang-btn"
-                id="kzButton"
-                onclick="setLanguage('kz')"
+                aria-label="Закрыть меню"
             >
-                🇰🇿 KZ
+                ×
             </button>
 
-            <button
-                type="button"
-                class="lang-btn"
-                id="ruButton"
-                onclick="setLanguage('ru')"
-            >
-                🇷🇺 RU
-            </button>
+            <ul>
+                <li><a href="#" id="navHome">Главная</a></li>
+                <li><a href="#courses" id="navCourses">Курсы</a></li>
+                <li><a href="#about" id="navAbout">О нас</a></li>
+                <li><a href="#register" id="navRegister">Регистрация</a></li>
+            </ul>
+
+            <div class="language-switch">
+                <button
+                    type="button"
+                    class="lang-btn"
+                    id="kzButton"
+                    onclick="setLanguage('kz')"
+                >
+                    🇰🇿 KZ
+                </button>
+
+                <button
+                    type="button"
+                    class="lang-btn"
+                    id="ruButton"
+                    onclick="setLanguage('ru')"
+                >
+                    🇷🇺 RU
+                </button>
+            </div>
         </div>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
     </nav>
 </header>
 
@@ -905,10 +1206,10 @@
     </p>
 </footer>
 
-<div class="success-modal" id="successModal">
+<div class="success-modal" id="successModal" aria-hidden="true">
     <div class="success-modal__overlay" id="successModalOverlay"></div>
 
-    <div class="success-modal__content">
+    <div class="success-modal__content" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
         <div class="success-modal__icon">✓</div>
 
         <h2 id="successModalTitle">
@@ -930,6 +1231,50 @@
     
 <script src="js/language.js"></script>
 <script src="js/form.js"></script>
+
+
+<script>
+    (function () {
+        const menuToggle = document.getElementById("menuToggle");
+        const menuClose = document.getElementById("menuClose");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuOverlay = document.getElementById("menuOverlay");
+
+        function openMenu() {
+            if (!mobileMenu || !menuOverlay || !menuToggle) return;
+            mobileMenu.classList.add("open");
+            menuOverlay.classList.add("open");
+            document.body.classList.add("menu-open");
+            menuToggle.setAttribute("aria-expanded", "true");
+        }
+
+        function closeMenu() {
+            if (!mobileMenu || !menuOverlay || !menuToggle) return;
+            mobileMenu.classList.remove("open");
+            menuOverlay.classList.remove("open");
+            document.body.classList.remove("menu-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        }
+
+        if (menuToggle) menuToggle.addEventListener("click", openMenu);
+        if (menuClose) menuClose.addEventListener("click", closeMenu);
+        if (menuOverlay) menuOverlay.addEventListener("click", closeMenu);
+
+        if (mobileMenu) {
+            mobileMenu.querySelectorAll("a").forEach(function (link) {
+                link.addEventListener("click", closeMenu);
+            });
+        }
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") closeMenu();
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 600) closeMenu();
+        });
+    })();
+</script>
 
 </body>
 </html>
