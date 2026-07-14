@@ -4,128 +4,292 @@ const scriptURL =
 const form = document.getElementById("registerForm");
 const submitButton = document.getElementById("submitButton");
 
-if (form) {
-    form.addEventListener("submit", async function (event) {
-        event.preventDefault();
+const statusModal = document.getElementById("successModal");
+const statusModalOverlay = document.getElementById("successModalOverlay");
+const statusModalClose = document.getElementById("successModalClose");
+const statusModalTitle = document.getElementById("successModalTitle");
+const statusModalText = document.getElementById("successModalText");
 
-        const firstNameInput = document.getElementById("firstName");
-        const lastNameInput = document.getElementById("lastName");
-        const phoneInput = document.getElementById("phone");
-        const emailInput = document.getElementById("email");
-        const courseSelect = document.getElementById("course");
+const statusModalIcon = statusModal
+    ? statusModal.querySelector(".success-modal__icon")
+    : null;
 
+
+function getCurrentLanguage() {
+    return localStorage.getItem("orleuLanguage") === "kz"
+        ? "kz"
+        : "ru";
+}
+
+
+function showStatusModal(type, title, message, buttonText) {
+    if (
+        !statusModal ||
+        !statusModalTitle ||
+        !statusModalText ||
+        !statusModalClose
+    ) {
+        window.alert(`${title}\n\n${message}`);
+        return;
+    }
+
+    statusModal.classList.toggle(
+        "error",
+        type === "error"
+    );
+
+    statusModalTitle.textContent = title;
+    statusModalText.textContent = message;
+    statusModalClose.textContent = buttonText;
+
+    if (statusModalIcon) {
+        statusModalIcon.textContent =
+            type === "error" ? "!" : "✓";
+    }
+
+    statusModal.classList.add("open");
+    statusModal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.classList.add("modal-open");
+
+    statusModalClose.focus();
+}
+
+
+function closeStatusModal() {
+    if (!statusModal) {
+        return;
+    }
+
+    statusModal.classList.remove(
+        "open",
+        "error"
+    );
+
+    statusModal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.classList.remove("modal-open");
+}
+
+
+if (statusModalClose) {
+    statusModalClose.addEventListener(
+        "click",
+        closeStatusModal
+    );
+}
+
+
+if (statusModalOverlay) {
+    statusModalOverlay.addEventListener(
+        "click",
+        closeStatusModal
+    );
+}
+
+
+document.addEventListener(
+    "keydown",
+    function (event) {
         if (
-            !firstNameInput ||
-            !lastNameInput ||
-            !phoneInput ||
-            !emailInput ||
-            !courseSelect
+            event.key === "Escape" &&
+            statusModal &&
+            statusModal.classList.contains("open")
         ) {
-            alert("❌ Не удалось найти поля формы.");
-            return;
+            closeStatusModal();
         }
+    }
+);
 
-        if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-        }
 
-        if (!courseSelect.value) {
-            alert("❌ Выберите программу.");
-            courseSelect.focus();
-            return;
-        }
+if (form) {
+    form.addEventListener(
+        "submit",
+        async function (event) {
+            event.preventDefault();
 
-        const selectedCourseText =
-            courseSelect.options[courseSelect.selectedIndex].textContent.trim();
+            const firstNameInput =
+                document.getElementById("firstName");
 
-        const data = {
-            firstName: firstNameInput.value.trim(),
-            lastName: lastNameInput.value.trim(),
-            phone: phoneInput.value.trim(),
-            email: emailInput.value.trim(),
+            const lastNameInput =
+                document.getElementById("lastName");
 
-            // В таблицу отправится полное название программы,
-            // а не course1, course2, course5 и т. д.
-            course: selectedCourseText
-        };
+            const phoneInput =
+                document.getElementById("phone");
 
-        const originalButtonText = submitButton
-            ? submitButton.textContent
-            : "";
+            const emailInput =
+                document.getElementById("email");
 
-        try {
-            if (submitButton) {
-                submitButton.disabled = true;
+            const courseSelect =
+                document.getElementById("course");
 
-                const currentLanguage =
-                    localStorage.getItem("orleuLanguage") || "ru";
+            const currentLanguage =
+                getCurrentLanguage();
 
-                submitButton.textContent =
+            if (
+                !firstNameInput ||
+                !lastNameInput ||
+                !phoneInput ||
+                !emailInput ||
+                !courseSelect
+            ) {
+                showStatusModal(
+                    "error",
+
                     currentLanguage === "kz"
-                        ? "Жіберілуде..."
-                        : "Отправка...";
-            }
+                        ? "Қате"
+                        : "Ошибка",
 
-            const response = await fetch(scriptURL, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "text/plain;charset=utf-8"
-                },
-                body: JSON.stringify(data)
-            });
+                    currentLanguage === "kz"
+                        ? "Форма өрістерін табу мүмкін болмады."
+                        : "Не удалось найти поля формы.",
 
-            if (!response.ok) {
-                throw new Error(
-                    `Ошибка сервера: ${response.status}`
+                    currentLanguage === "kz"
+                        ? "Жабу"
+                        : "Закрыть"
                 );
+
+                return;
             }
 
-            const result = await response.json();
-
-            if (result.result !== "success") {
-                throw new Error("Скрипт не подтвердил отправку.");
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
             }
 
-            const currentLanguage =
-                localStorage.getItem("orleuLanguage") || "ru";
+            if (!courseSelect.value) {
+                courseSelect.focus();
+                return;
+            }
 
-            alert(
-                currentLanguage === "kz"
-                    ? "✅ Өтінім сәтті жіберілді!"
-                    : "✅ Заявка успешно отправлена!"
-            );
+            const selectedCourseText =
+                courseSelect.options[
+                    courseSelect.selectedIndex
+                ].textContent.trim();
 
-            form.reset();
-        } catch (error) {
-            console.error("Ошибка отправки формы:", error);
+            const data = {
+                firstName:
+                    firstNameInput.value.trim(),
 
-            const currentLanguage =
-                localStorage.getItem("orleuLanguage") || "ru";
+                lastName:
+                    lastNameInput.value.trim(),
 
-            alert(
-                currentLanguage === "kz"
-                    ? "❌ Өтінімді жіберу кезінде қате пайда болды."
-                    : "❌ Ошибка при отправке заявки."
-            );
-        } finally {
-            if (submitButton) {
-                submitButton.disabled = false;
+                phone:
+                    phoneInput.value.trim(),
 
-                const currentLanguage =
-                    localStorage.getItem("orleuLanguage") || "ru";
+                email:
+                    emailInput.value.trim(),
 
-                if (
-                    typeof lang !== "undefined" &&
-                    lang[currentLanguage]
-                ) {
+                course:
+                    selectedCourseText
+            };
+
+            const originalButtonText =
+                submitButton
+                    ? submitButton.textContent
+                    : "";
+
+            try {
+                if (submitButton) {
+                    submitButton.disabled = true;
+
                     submitButton.textContent =
-                        lang[currentLanguage].submitButton;
-                } else {
-                    submitButton.textContent =
-                        originalButtonText || "Подать заявку";
+                        currentLanguage === "kz"
+                            ? "Жіберілуде..."
+                            : "Отправка...";
+                }
+
+                const response =
+                    await fetch(scriptURL, {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "text/plain;charset=utf-8"
+                        },
+
+                        body: JSON.stringify(data)
+                    });
+
+                if (!response.ok) {
+                    throw new Error(
+                        `Ошибка сервера: ${response.status}`
+                    );
+                }
+
+                const result =
+                    await response.json();
+
+                if (result.result !== "success") {
+                    throw new Error(
+                        "Скрипт не подтвердил отправку."
+                    );
+                }
+
+                form.reset();
+
+                showStatusModal(
+                    "success",
+
+                    currentLanguage === "kz"
+                        ? "Өтінім сәтті жіберілді!"
+                        : "Заявка успешно отправлена!",
+
+                    currentLanguage === "kz"
+                        ? "Тіркелгеніңізге рақмет. Жақын арада сізбен хабарласамыз."
+                        : "Спасибо за регистрацию. Мы свяжемся с вами в ближайшее время.",
+
+                    currentLanguage === "kz"
+                        ? "Жабу"
+                        : "Закрыть"
+                );
+            } catch (error) {
+                console.error(
+                    "Ошибка отправки формы:",
+                    error
+                );
+
+                showStatusModal(
+                    "error",
+
+                    currentLanguage === "kz"
+                        ? "Өтінім жіберілмеді"
+                        : "Заявка не отправлена",
+
+                    currentLanguage === "kz"
+                        ? "Қате пайда болды. Интернет байланысын тексеріп, қайта көріңіз."
+                        : "Произошла ошибка. Проверьте интернет и попробуйте ещё раз.",
+
+                    currentLanguage === "kz"
+                        ? "Жабу"
+                        : "Закрыть"
+                );
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+
+                    const language =
+                        getCurrentLanguage();
+
+                    if (
+                        typeof lang !== "undefined" &&
+                        lang[language]
+                    ) {
+                        submitButton.textContent =
+                            lang[language].submitButton;
+                    } else {
+                        submitButton.textContent =
+                            originalButtonText ||
+                            "Подать заявку";
+                    }
                 }
             }
         }
-    });
+    );
 }
