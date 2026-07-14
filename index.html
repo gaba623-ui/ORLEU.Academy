@@ -70,15 +70,6 @@ display:flex;
 align-items:center;
 }
 
-.logo{
-display:flex;
-align-items:center;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-}
 
 .logo img{
     height:70px;
@@ -191,12 +182,18 @@ gap:30px;
 
 }
 
-
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid rgba(13,71,161,.10);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+}
 
 .card:hover{
-
-transform:translateY(-8px);
-
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
 
 .card h3{
@@ -778,7 +775,7 @@ ORLEU — образовательная платформа повышения �
 
 <section id="register">
 
-<h2 class="title">Запись на обучение</h2>
+<h2 class="title" id="registerTitle">Запись на обучение</h2>
 
 <form id="registerForm">
 
@@ -827,9 +824,10 @@ ORLEU — образовательная платформа повышения �
 </footer>
 
 
-</div>
-</body><script src="js/language.js"></script>
+
+<script src="js/language.js"></script>
 <script src="js/form.js"></script>
+</body>
 </html>
 
 
