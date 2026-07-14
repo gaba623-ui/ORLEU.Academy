@@ -92,8 +92,6 @@ function setLanguage(l){
     document.getElementById("navCourses").textContent = lang[l].courses;
     document.getElementById("navAbout").textContent = lang[l].about;
     document.getElementById("navRegister").textContent = lang[l].register;
-
-    document.getElementById("heroTitle").textContent = lang[l].title;
     document.getElementById("heroText").textContent = lang[l].hero;
     document.getElementById("heroButton").textContent = lang[l].button;
     document.getElementById("coursesTitle").textContent = lang[l].coursesTitle;
