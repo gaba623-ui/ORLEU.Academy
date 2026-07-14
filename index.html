@@ -53,6 +53,7 @@ list-style:none;
 }
 
 nav a{
+display:inline-block;
 text-decoration:none;
 color:#1d2939;
 font-weight:600;
@@ -66,27 +67,14 @@ transform:translateY(-2px);
 }
     
 .logo{
-display:flex;
-align-items:center;
+    display:flex;
+    align-items:center;
 }
-
 
 .logo img{
     height:70px;
     width:auto;
     display:block;
-}
-
-nav ul{
-display:flex;
-gap:35px;
-list-style:none;
-}
-
-nav a{
-text-decoration:none;
-color:#333;
-font-weight:600;
 }
 
 .hero{
@@ -350,6 +338,28 @@ margin-top:80px;
 
 }
 
+.language-switch{
+display:flex;
+gap:10px;
+}
+
+.lang-btn{
+padding:8px 14px;
+border:none;
+border-radius:8px;
+background:#0d47a1;
+color:white;
+cursor:pointer;
+font-size:14px;
+font-weight:600;
+transition:.3s;
+}
+
+.lang-btn:hover{
+background:#1565c0;
+transform:translateY(-2px);
+}    
+
 /* Планшеты */
 @media(max-width:900px){
 
@@ -552,28 +562,6 @@ margin-top:80px;
         padding:30px 16px;
     }
 }
-
-.language-switch{
-display:flex;
-gap:10px;
-}
-
-.lang-btn{
-padding:8px 14px;
-border:none;
-border-radius:8px;
-background:#0d47a1;
-color:white;
-cursor:pointer;
-font-size:14px;
-font-weight:600;
-transition:.3s;
-}
-
-.lang-btn:hover{
-background:#1565c0;
-transform:translateY(-2px);
-}    
 
 .hero div{
     animation:fadeIn 1.5s ease;
@@ -779,17 +767,17 @@ ORLEU — образовательная платформа повышения �
 
 <form id="registerForm">
 
-<input id="firstName" placeholder="Имя">
+<input id="firstName" name="firstName" type="text" placeholder="Имя" required>
 
-<input id="lastName" placeholder="Фамилия">
+<input id="lastName" name="lastName" type="text" placeholder="Фамилия" required>
 
-<input id="phone" placeholder="Телефон">
+<input id="phone" name="phone" type="tel" placeholder="Телефон" required>
 
-<input id="email" placeholder="Email">
+<input id="email" name="email" type="email" placeholder="Email" required>
 
-<select id="course">
+<select id="course" name="course" required>
     
-<option>Выберите программу</option>
+<option value="" selected disabled>Выберите программу</option>
 
 <option>Мектепке дейінгі ұйымның заттық кеңістіктік даму ортасын ұйымдастыру</option>
 
@@ -824,10 +812,8 @@ ORLEU — образовательная платформа повышения �
 </footer>
 
 
-
 <script src="js/language.js"></script>
 <script src="js/form.js"></script>
 </body>
 </html>
-
 
