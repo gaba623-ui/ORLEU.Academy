@@ -2231,6 +2231,11 @@
         overlay.classList.remove("open");
         card.classList.remove("open");
 
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
         if (markSeen) {
             localStorage.setItem(GUIDE_KEY, "1");
         }
