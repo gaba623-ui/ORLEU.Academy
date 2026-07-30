@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Прайс-лист — ORLEU</title>
-<script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=kkyAaXFXLfQAlRU4JeY4dq1rNYAEZDYY5-h3B9y061rg0sAmo5VmaJLWg44w3nyvCDbY5i2rOFr64irDf-As1DuUDd2AMQClAO4d167W_nDblZmcBJkzd-VHR9KWw4o5JB0yo6ixGMnTjskmqytjzj9usv-vCd94ai4Xurtx_TcQizUklMTIV9uOqlI2ZHMO-dVjb7q8X79f2dJKpcHu5Mq2uR4j2rPWvFLS7tJ5qJo03YjdC6CiGuv5yWOdSkanRSac1k99BRJOj_iSXLor2aTkgYtrJn2ZHcSOJli0rwYAamZzeT9U00QBRLEc5O3z94Ee3wTtjfRdxrOy-LF44Q" charset="UTF-8"></script><style>
+<style>
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,sans-serif;color:#1d2939;background:#f6f8fb;line-height:1.5}
 header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e4e7ec;padding:8px 5%}nav{min-height:66px;display:flex;align-items:center;gap:18px;max-width:1500px;margin:auto}
 .site-brand{display:flex;align-items:center;gap:12px;min-width:0;flex:1}.logo img{height:56px;width:auto;display:block}.site-title{max-width:430px}.site-title-main{color:#0d47a1;font-size:17px;font-weight:700;line-height:1.15}.site-title-sub{margin-top:3px;color:#475467;font-size:12px;font-weight:500;line-height:1.25}
@@ -133,10 +133,23 @@ header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid 
 <div class="contacts"><div class="contact"><strong>Байсарова Алия Маскаровна</strong><br><a href="tel:+77014960499">+7 701 496 04 99</a></div><div class="contact"><strong>Адилгазиева Алтынай Тулегеновна</strong><br><a href="tel:+77787026222">+7 778 702 62 22</a></div><div class="contact"><strong>Самарбаева Улмекен Исатаевна</strong><br><a href="tel:+77713246730">+7 771 324 67 30</a></div></div>
 </main>
 
+<div class="guide-overlay" id="guideOverlay"></div>
+<div class="guide-arrow" id="guideArrow"></div>
+<div class="guide-box" id="guideBox" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+  <div class="guide-step" id="guideStep">Шаг 1 / 5</div>
+  <h3 id="guideTitle">Поиск курса</h3>
+  <p id="guideText">Введите предмет, категорию или название программы.</p>
+  <div class="guide-actions">
+    <button class="guide-btn skip" id="guideSkip" type="button">Пропустить</button>
+    <button class="guide-btn next" id="guideNext" type="button">Далее</button>
+  </div>
+</div>
+<button class="guide-help" id="guideHelp" type="button" aria-label="Показать обучение">?</button>
+
 <footer id="siteFooter">© 2026 ORLEU. Все права защищены.</footer>
 <script>
 const translations={ru:{title:"Прайс-лист",subtitle:"Перечень курсов повышения квалификации педагогов на 2026 год",search:"Поиск по категории или названию программы…",pdf:"📄 Открыть PDF",wa:"💬 Уточнить стоимость",category:"Категория слушателей",program:"Образовательная программа",hours:"Часы",remote:"Дистанционно",onsite:"Аудиторно",empty:"Ничего не найдено.",footer:"© 2026 ORLEU. Все права защищены.",note:"Все курсы включены в реестр программ повышения квалификации Министерства просвещения Республики Казахстан.",welcomeTitle:"Добро пожаловать в ORLEU",welcomeText:"Здесь вы можете быстро найти курс, посмотреть стоимость и связаться с институтом.",welcome1:"🔎 Найти нужный курс",welcome2:"💰 Посмотреть стоимость",welcome3:"🌐 Переключить язык RU/KZ",welcome4:"💬 Написать в WhatsApp",welcomeStart:"Начать"},kz:{title:"Прайс-парақ",subtitle:"Педагогтердің біліктіліктерін арттыру курстарының тізімі (2026 жыл)",search:"Санат немесе бағдарлама атауы бойынша іздеу…",pdf:"📄 PDF ашу",wa:"💬 Бағаны нақтылау",category:"Тыңдаушылар санаты",program:"Білім беру бағдарламасы",hours:"Сағат саны",remote:"Қашықтан",onsite:"Аудиториялық",empty:"Ештеңе табылмады.",footer:"© 2026 ORLEU. Барлық құқықтар қорғалған.",note:"Барлық курстар ҚР Оқу-ағарту министрлігінің біліктілікті арттыру бағдарламаларының реестріне енгізілген.",welcomeTitle:"ORLEU сайтына қош келдіңіз",welcomeText:"Мұнда курсты жылдам тауып, бағасын көріп және институтпен байланыса аласыз.",welcome1:"🔎 Қажетті курсты табу",welcome2:"💰 Бағасын көру",welcome3:"🌐 RU/KZ тілін ауыстыру",welcome4:"💬 WhatsApp арқылы жазу",welcomeStart:"Бастау"}};
-function setLang(lang){const t=translations[lang]||translations.ru;document.documentElement.lang=lang==="kz"?"kk":"ru";pageTitle.textContent=t.title;pageSubtitle.textContent=t.subtitle;searchInput.placeholder=t.search;pdfButton.textContent=t.pdf;waButton.textContent=t.wa;thCategory.textContent=t.category;thProgram.textContent=t.program;thHours.textContent=t.hours;thRemote.textContent=t.remote;emptyState.textContent=t.empty;registryNote.textContent=t.note;siteFooter.textContent=t.footer;welcomeTitle.textContent=t.welcomeTitle;welcomeText.textContent=t.welcomeText;welcomeItem1.textContent=t.welcome1;welcomeItem2.textContent=t.welcome2;welcomeItem3.textContent=t.welcome3;welcomeItem4.textContent=t.welcome4;welcomeStart.textContent=t.welcomeStart;document.querySelectorAll("[data-"+lang+"]").forEach(el=>el.textContent=el.dataset[lang]);
+function setLang(lang){const t=translations[lang]||translations.ru;document.documentElement.lang=lang==="kz"?"kk":"ru";document.getElementById("pageTitle").textContent=t.title;document.getElementById("pageSubtitle").textContent=t.subtitle;document.getElementById("searchInput").placeholder=t.search;document.getElementById("pdfButton").textContent=t.pdf;document.getElementById("waButton").textContent=t.wa;document.getElementById("thCategory").textContent=t.category;document.getElementById("thProgram").textContent=t.program;document.getElementById("thHours").textContent=t.hours;document.getElementById("thRemote").textContent=t.remote;document.getElementById("emptyState").textContent=t.empty;document.getElementById("registryNote").textContent=t.note;document.getElementById("siteFooter").textContent=t.footer;document.querySelectorAll("[data-"+lang+"]").forEach(el=>el.textContent=el.dataset[lang]);
 document.querySelectorAll("#priceTable tbody tr").forEach(row=>{
     const cells=row.querySelectorAll("td");
     if(cells[1]) cells[1].setAttribute("data-label",t.category);
@@ -145,9 +158,9 @@ document.querySelectorAll("#priceTable tbody tr").forEach(row=>{
     if(cells[4]) cells[4].setAttribute("data-label",t.remote);
     
 });document.querySelectorAll(".lang-btn").forEach(b=>b.classList.remove("active"));document.getElementById(lang+"Button").classList.add("active");localStorage.setItem("orleuLanguage",lang)}
-kzButton.addEventListener("click",()=>setLang("kz"));ruButton.addEventListener("click",()=>setLang("ru"));setLang(localStorage.getItem("orleuLanguage")==="kz"?"kz":"ru");
-searchInput.addEventListener("input",()=>{const q=searchInput.value.trim().toLowerCase();let count=0;document.querySelectorAll("#priceTable tbody tr").forEach(row=>{const visible=row.textContent.toLowerCase().includes(q);row.style.display=visible?"":"none";if(visible)count++});emptyState.style.display=count?"none":"block"});
-menuToggle.addEventListener("click",()=>mobileMenu.classList.add("open"));menuClose.addEventListener("click",()=>mobileMenu.classList.remove("open"));mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>mobileMenu.classList.remove("open")));
+document.getElementById("kzButton").addEventListener("click",()=>setLang("kz"));document.getElementById("ruButton").addEventListener("click",()=>setLang("ru"));setLang(localStorage.getItem("orleuLanguage")==="kz"?"kz":"ru");
+document.getElementById("searchInput").addEventListener("input",()=>{const q=document.getElementById("searchInput").value.trim().toLowerCase();let count=0;document.querySelectorAll("#priceTable tbody tr").forEach(row=>{const visible=row.textContent.toLowerCase().includes(q);row.style.display=visible?"":"none";if(visible)count++});document.getElementById("emptyState").style.display=count?"none":"block"});
+document.getElementById("menuToggle").addEventListener("click",()=>document.getElementById("mobileMenu").classList.add("open"));document.getElementById("menuClose").addEventListener("click",()=>document.getElementById("mobileMenu").classList.remove("open"));document.getElementById("mobileMenu").querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>document.getElementById("mobileMenu").classList.remove("open")));
 
 
 const guideTranslations={
@@ -173,9 +186,20 @@ const guideTranslations={
   }
 };
 
+
+const guideOverlay=document.getElementById("guideOverlay");
+const guideArrow=document.getElementById("guideArrow");
+const guideBox=document.getElementById("guideBox");
+const guideStep=document.getElementById("guideStep");
+const guideTitle=document.getElementById("guideTitle");
+const guideText=document.getElementById("guideText");
+const guideSkip=document.getElementById("guideSkip");
+const guideNext=document.getElementById("guideNext");
+const guideHelp=document.getElementById("guideHelp");
+
 let guideIndex=0;
 let guideTarget=null;
-const GUIDE_KEY="orleuGuide2026v3";
+const GUIDE_KEY="orleuGuide2026Fixed2";
 
 function guideLang(){
   return localStorage.getItem("orleuLanguage")==="kz"?"kz":"ru";
@@ -214,7 +238,7 @@ function openGuide(){
   guideIndex=0;
   guideOverlay.classList.add("show");
   guideBox.classList.add("show");
-  document.body.style.overflow="hidden";
+  document.body.style.overflow="";
   renderGuide();
 }
 function closeGuide(mark=true){
