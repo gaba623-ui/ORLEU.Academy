@@ -14,7 +14,7 @@
         rel="stylesheet"
     >
 
-    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=2Qdly6w7KmeqzGf-L_Y8tP6Ahypmtvl7oV-XKIeoDulnwUjW7VxsFDUp762tKnm8bipktbvQnXn0ckP-tml0rPaFdK0pl9kWTcknGYjw1Y7N0ylDrxj5EmgHzSUaA9Ae-AUoJMtvxeC9-N6eYS-JYZlzbEglviDC2FQ7mu_IJHB_fqgcb80AkKTB2BTGB81b947TXPuH8T0LYVw4CbHD4bOt-FvRV7JHkCiBLnWCbN1ljZHnHcMsByiAdq84jCohB7sd90qraxdMKoq1YFHyLD7YAWGh4qZp58Gc0FFHVh8UM6KAVEeDUq5RlNojrP5qPHh0Qk7mm_AaJKKufLfffA" charset="UTF-8"></script><style>
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -364,6 +364,141 @@
         @media screen and (max-width: 600px) {
             .seminar-register-btn {
                 width: 100%;
+            }
+        }
+
+        /* Раздел контактов */
+        #contacts {
+            background: #ffffff;
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: minmax(280px, 0.8fr) minmax(360px, 1.2fr);
+            gap: 32px;
+            align-items: stretch;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding: 32px;
+            border-radius: 20px;
+            background: #f5f8fc;
+            border: 1px solid rgba(13, 71, 161, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            flex: 0 0 46px;
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: #e8f1ff;
+            font-size: 23px;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 6px;
+            color: #0d47a1;
+            font-size: 18px;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: #344054;
+            line-height: 1.6;
+            text-decoration: none;
+        }
+
+        .contact-actions {
+            display: grid;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .contact-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 11px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-button.whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .contact-button.map-link {
+            background: #0d47a1;
+            color: white;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+        }
+
+        .map-wrapper {
+            min-height: 440px;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #eef4ff;
+            border: 1px solid rgba(13, 71, 161, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .map-wrapper iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 440px;
+            border: 0;
+        }
+
+        .map-fallback {
+            padding: 12px 16px;
+            background: #eef4ff;
+            color: #52606d;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 900px) {
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-wrapper,
+            .map-wrapper iframe {
+                min-height: 380px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .contact-info {
+                padding: 22px;
+            }
+
+            .map-wrapper,
+            .map-wrapper iframe {
+                min-height: 320px;
             }
         }
 
@@ -992,6 +1127,7 @@
                 <li><a href="#seminars" id="navSeminars">Семинары</a></li>
                 <li><a href="#about" id="navAbout">О нас</a></li>
                 <li><a href="#register" id="navRegister">Регистрация</a></li>
+                <li><a href="#contacts" id="navContacts">Контакты</a></li>
             </ul>
 
             <div class="language-switch">
@@ -1298,6 +1434,67 @@
     </form>
 </section>
 
+
+<section id="contacts">
+    <h2 class="title" id="contactsTitle">Контакты</h2>
+
+    <div class="contacts-grid">
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                    <h3 id="officeTitle">Наш офис</h3>
+                    <p id="officeAddress">
+                        г. Актау, БЦ «Ажар», 17-й микрорайон, 48, 5 этаж
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div>
+                    <h3 id="phoneTitle">Телефон и WhatsApp</h3>
+                    <a href="tel:+77012541822">+7 701 254 18 22</a>
+                </div>
+            </div>
+
+            <div class="contact-actions">
+                <a
+                    class="contact-button whatsapp"
+                    id="whatsappButton"
+                    href="https://wa.me/77012541822?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%20%D0%BA%D1%83%D1%80%D1%81%D0%B0%D1%85%20ORLEU."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    💬 Написать в WhatsApp
+                </a>
+
+                <a
+                    class="contact-button map-link"
+                    id="twoGisButton"
+                    href="https://go.2gis.com/2mdOM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    🗺️ Открыть в 2GIS
+                </a>
+            </div>
+        </div>
+
+        <div class="map-wrapper">
+            <iframe
+                title="Карта 2GIS — БЦ Ажар"
+                src="https://widgets.2gis.com/widget?type=firm&id=70000001083816698&city=aktau&lang=ru_RU&zoom=16"
+                loading="lazy"
+                allowfullscreen
+            ></iframe>
+            <div class="map-fallback" id="mapFallback">
+                Если карта не загрузилась, нажмите кнопку «Открыть в 2GIS».
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer>
     <h2>ORLEU</h2>
 
@@ -1410,6 +1607,70 @@
             });
             document.getElementById("ruButton")?.addEventListener("click", function () {
                 applySeminarLanguage("ru");
+            });
+        });
+    })();
+</script>
+
+
+<script>
+    /* Перевод раздела контактов */
+    (function () {
+        const contactTranslations = {
+            ru: {
+                navContacts: "Контакты",
+                contactsTitle: "Контакты",
+                officeTitle: "Наш офис",
+                officeAddress: "г. Актау, БЦ «Ажар», 17-й микрорайон, 48, 5 этаж",
+                phoneTitle: "Телефон и WhatsApp",
+                whatsappButton: "💬 Написать в WhatsApp",
+                twoGisButton: "🗺️ Открыть в 2GIS",
+                mapFallback: "Если карта не загрузилась, нажмите кнопку «Открыть в 2GIS»."
+            },
+            kz: {
+                navContacts: "Байланыс",
+                contactsTitle: "Байланыс",
+                officeTitle: "Біздің кеңсе",
+                officeAddress: "Ақтау қ., «Ажар» БО, 17-шағынаудан, 48, 5-қабат",
+                phoneTitle: "Телефон және WhatsApp",
+                whatsappButton: "💬 WhatsApp-қа жазу",
+                twoGisButton: "🗺️ 2GIS картасынан ашу",
+                mapFallback: "Карта жүктелмесе, «2GIS картасынан ашу» батырмасын басыңыз."
+            }
+        };
+
+        function applyContactLanguage(lang) {
+            const selectedLanguage = lang === "kz" ? "kz" : "ru";
+            const t = contactTranslations[selectedLanguage];
+
+            Object.keys(t).forEach(function (id) {
+                const element = document.getElementById(id);
+                if (element) element.textContent = t[id];
+            });
+        }
+
+        window.addEventListener("DOMContentLoaded", function () {
+            const savedLanguage =
+                localStorage.getItem("orleuLanguage") ||
+                localStorage.getItem("language") ||
+                "ru";
+
+            applyContactLanguage(savedLanguage);
+
+            const previousSetLanguage = window.setLanguage;
+            if (typeof previousSetLanguage === "function") {
+                window.setLanguage = function (lang) {
+                    previousSetLanguage(lang);
+                    applyContactLanguage(lang);
+                };
+            }
+
+            document.getElementById("kzButton")?.addEventListener("click", function () {
+                applyContactLanguage("kz");
+            });
+
+            document.getElementById("ruButton")?.addEventListener("click", function () {
+                applyContactLanguage("ru");
             });
         });
     })();
