@@ -1,70 +1,60 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="color-scheme" content="light">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Прайс-лист — ORLEU</title>
-<script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=OTKxj0aB6Pr1FepgkoztLrD8JnXzZHEcnbnN4xeR6b1g3QmqxjeXOhOj0aDq-e-GWolMCse3xaSNLqMygzN6fAr0n5WOpkVLISRzKUYgegX2JUxPL-6NYzGhBN7wP2YN4PpLajbfCU3iGiesiKCyaIH0R4FDGMcrdRKSmx79f4RGPaeG0ERaySItQyGIf4lW_3ryouEwiB_Wai1pQuJgjBHVNNoSvlrz3ii1JjIQshQC65d7sKalJdGb1huWChL21LH5A-6TmqUIUPqOP9WrUFBu20M69wIyi42ncmzfGgfl4GwxjLgexHIbAwXRNEuF2xg6PStbZOGiF6g8OmlqDA" charset="UTF-8"></script><style>
+<style>
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,sans-serif;color:#1d2939;background:#f6f8fb;line-height:1.5}
 header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e4e7ec;padding:8px 5%}nav{min-height:66px;display:flex;align-items:center;gap:18px;max-width:1500px;margin:auto}
 .site-brand{display:flex;align-items:center;gap:12px;min-width:0;flex:1}.logo img{height:56px;width:auto;display:block}.site-title{max-width:430px}.site-title-main{color:#0d47a1;font-size:17px;font-weight:700;line-height:1.15}.site-title-sub{margin-top:3px;color:#475467;font-size:12px;font-weight:500;line-height:1.25}
 .nav-panel{display:flex;align-items:center;gap:20px}.nav-panel ul{display:flex;align-items:center;gap:22px;list-style:none}.nav-panel a{color:#1d2939;text-decoration:none;font-weight:700;font-size:15px}.nav-panel a.active,.nav-panel a:hover{color:#0d47a1}.language-switch{display:flex;gap:7px}.lang-btn{border:0;border-radius:8px;padding:10px 12px;font-weight:700;cursor:pointer;background:#0d47a1;color:white}.lang-btn.active{background:#f5a623;color:#102a43}.menu-toggle,.menu-close{display:none}
 .hero{background:linear-gradient(135deg,#0d47a1,#1976d2);color:#fff;padding:60px 7% 55px;text-align:center}.hero h1{font-size:42px;margin-bottom:14px}.hero p{max-width:800px;margin:auto;font-size:18px}
 .container{max-width:1500px;margin:auto;padding:45px 4% 70px}.toolbar{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;margin-bottom:22px}.search{width:100%;border:1px solid #cfd8e3;border-radius:11px;padding:14px 16px;font-size:16px}.action{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:10px;padding:14px 18px;font-weight:700;text-decoration:none;cursor:pointer;white-space:nowrap}.action.pdf{background:#0d47a1;color:#fff}.action.whatsapp{background:#25d366;color:#fff}
-.table-wrap{overflow-x:auto;overflow-y:visible;background:#fff;border-radius:16px;box-shadow:0 12px 34px rgba(16,24,40,.08);border:1px solid #e4e7ec}table{width:100%;border-collapse:collapse;min-width:1050px}th{position:static;background:#0d47a1;color:#fff;padding:14px 12px;text-align:left;font-size:14px}td{padding:13px 12px;border-bottom:1px solid #e4e7ec;vertical-align:top;font-size:14px}tbody tr:hover{background:#f0f6ff}td:nth-child(1),td:nth-child(4),td:nth-child(5),td:nth-child(6){text-align:center;white-space:nowrap}
+.table-wrap{overflow-x:auto;overflow-y:visible;background:#fff;border-radius:16px;box-shadow:0 12px 34px rgba(16,24,40,.08);border:1px solid #e4e7ec}table{width:100%;border-collapse:collapse;min-width:1050px}th{position:static;background:#0d47a1;color:#fff;padding:14px 12px;text-align:left;font-size:14px}td{padding:13px 12px;border-bottom:1px solid #e4e7ec;vertical-align:top;font-size:14px}tbody tr:hover{background:#f0f6ff}td:nth-child(1),td:nth-child(4),td:nth-child(5){text-align:center;white-space:nowrap}
 .note{margin-top:24px;padding:18px 20px;border-left:5px solid #f5a623;background:#fff;border-radius:10px;box-shadow:0 8px 24px rgba(16,24,40,.06)}.contacts{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.contact{background:#fff;border:1px solid #e4e7ec;border-radius:12px;padding:16px;text-align:center}.contact a{color:#0d47a1;text-decoration:none;font-weight:700}footer{background:#0b2e59;color:#fff;text-align:center;padding:28px 20px}.empty{display:none;text-align:center;padding:30px;color:#667085}
 @media(max-width:900px){header{padding:7px 4%}nav{min-height:58px}.logo img{height:48px}.site-title{max-width:calc(100vw - 145px)}.site-title-main{font-size:14px}.site-title-sub{font-size:10px}.menu-toggle{display:flex;margin-left:auto;width:42px;height:38px;border:0;background:#0d47a1;border-radius:8px;flex-direction:column;justify-content:center;align-items:center;gap:5px}.menu-toggle span{width:21px;height:2px;background:#fff}.nav-panel{position:fixed;inset:0 0 0 auto;width:min(340px,88vw);background:#fff;transform:translateX(100%);transition:.25s;padding:70px 24px 25px;display:block;box-shadow:-10px 0 30px rgba(0,0,0,.15)}.nav-panel.open{transform:translateX(0)}.menu-close{display:block;position:absolute;right:18px;top:14px;border:0;background:transparent;font-size:35px}.nav-panel ul{display:block}.nav-panel li{margin:0 0 14px}.nav-panel a{font-size:17px}.language-switch{margin-top:24px}.toolbar{grid-template-columns:1fr 1fr}.search{grid-column:1/-1}.contacts{grid-template-columns:1fr}}
 @media(max-width:650px){.hero{padding:42px 20px}.hero h1{font-size:28px}.hero p{font-size:16px}.container{padding:28px 14px 50px}.toolbar{grid-template-columns:1fr}.search{grid-column:auto}.action{width:100%}.table-wrap{overflow:visible;background:transparent;border:0;box-shadow:none}table{min-width:0}thead{display:none}tbody,table{display:block}tr{display:block;background:#fff;border:1px solid #e4e7ec;border-radius:14px;margin-bottom:14px;padding:10px 14px;box-shadow:0 8px 22px rgba(16,24,40,.06)}td{display:grid;grid-template-columns:120px 1fr;gap:10px;text-align:left!important;border-bottom:1px dashed #e4e7ec;padding:10px 0;white-space:normal!important}td:last-child{border-bottom:0}td::before{content:attr(data-label);font-weight:700;color:#0d47a1}.site-title-main{font-size:12px}.site-title-sub{font-size:9px}}
 
-/* Обучающий интерфейс */
-.tour-overlay{
-    position:fixed;inset:0;background:rgba(9,30,66,.68);
-    z-index:1000;display:none;align-items:flex-end;justify-content:center;
-    padding:18px;
+.welcome-overlay{
+  position:fixed;inset:0;z-index:9999;
+  background:rgba(6,34,66,.78);
+  display:none;align-items:center;justify-content:center;
+  padding:18px;
 }
-.tour-overlay.show{display:flex}
-.tour-card{
-    width:min(520px,100%);background:#fff;border-radius:20px;
-    box-shadow:0 24px 70px rgba(0,0,0,.28);padding:22px;
-    animation:tourUp .28s ease;
+.welcome-overlay.show{display:flex}
+.welcome-card{
+  width:min(560px,100%);
+  background:#fff;border-radius:22px;
+  padding:28px;
+  box-shadow:0 24px 80px rgba(0,0,0,.30);
+  text-align:center;
 }
-@keyframes tourUp{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
-.tour-badge{
-    display:inline-flex;align-items:center;gap:7px;background:#eef4ff;
-    color:#0d47a1;border-radius:999px;padding:7px 11px;
-    font-size:13px;font-weight:700;margin-bottom:12px
+.welcome-icon{font-size:44px;margin-bottom:8px}
+.welcome-card h2{font-size:28px;color:#0d47a1;margin-bottom:10px}
+.welcome-card p{color:#475467;font-size:16px;margin-bottom:18px}
+.welcome-list{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:10px;margin:18px 0 22px;text-align:left
 }
-.tour-card h2{font-size:24px;line-height:1.2;color:#102a43;margin-bottom:9px}
-.tour-card p{color:#475467;font-size:16px;margin-bottom:18px}
-.tour-progress{display:flex;gap:7px;margin-bottom:18px}
-.tour-dot{height:7px;flex:1;border-radius:999px;background:#e4e7ec}
-.tour-dot.active{background:#0d47a1}
-.tour-actions{display:flex;gap:10px;justify-content:flex-end}
-.tour-btn{
-    border:0;border-radius:10px;padding:12px 16px;font-weight:700;
-    cursor:pointer;font-size:15px
+.welcome-item{
+  background:#f6f8fb;border:1px solid #e4e7ec;
+  border-radius:12px;padding:12px;font-weight:700;color:#344054
 }
-.tour-btn.secondary{background:#f2f4f7;color:#344054}
-.tour-btn.primary{background:#0d47a1;color:#fff}
-.tour-help{
-    position:fixed;right:18px;bottom:18px;z-index:120;
-    width:48px;height:48px;border-radius:50%;border:0;
-    background:#0d47a1;color:#fff;font-size:22px;font-weight:700;
-    box-shadow:0 10px 28px rgba(13,71,161,.3);cursor:pointer
+.welcome-start{
+  border:0;border-radius:12px;background:#0d47a1;color:#fff;
+  padding:14px 24px;font-size:16px;font-weight:700;cursor:pointer;
+  width:100%
 }
-.tour-highlight{
-    position:relative;z-index:1002!important;
-    box-shadow:0 0 0 5px rgba(245,166,35,.95),0 12px 35px rgba(0,0,0,.2)!important;
-    border-radius:12px
-}
-@media(min-width:700px){
-    .tour-overlay{align-items:center}
+.help-button{
+  position:fixed;right:18px;bottom:18px;z-index:120;
+  width:48px;height:48px;border-radius:50%;border:0;
+  background:#0d47a1;color:#fff;font-size:22px;font-weight:700;
+  box-shadow:0 10px 28px rgba(13,71,161,.3);cursor:pointer
 }
 @media(max-width:650px){
-    .tour-card{padding:19px;border-radius:17px}
-    .tour-card h2{font-size:21px}
-    .tour-card p{font-size:15px}
-    .tour-actions{display:grid;grid-template-columns:1fr 1fr}
-    .tour-btn{width:100%}
+  .welcome-card{padding:22px 18px;border-radius:18px}
+  .welcome-card h2{font-size:23px}
+  .welcome-list{grid-template-columns:1fr}
 }
 
 </style></head>
@@ -79,183 +69,107 @@ header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid 
 <section class="hero"><div><h1 id="pageTitle">Прайс-лист</h1><p id="pageSubtitle">Перечень курсов повышения квалификации педагогов на 2026 год</p></div></section>
 <main class="container">
 <div class="toolbar"><input id="searchInput" class="search" type="search" placeholder="Поиск по категории или названию программы…"><a class="action pdf" href="price-list-orleu.pdf" target="_blank" id="pdfButton">📄 Открыть PDF</a><a class="action whatsapp" href="https://wa.me/77012541822?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C%20%D0%BA%D1%83%D1%80%D1%81%D0%B0." target="_blank" rel="noopener" id="waButton">💬 Уточнить стоимость</a></div>
-<div class="table-wrap"><table id="priceTable"><thead><tr><th>№</th><th id="thCategory">Категория слушателей</th><th id="thProgram">Образовательная программа</th><th id="thHours">Часы</th><th id="thRemote">Дистанционно</th><th id="thOnsite">Аудиторно</th></tr></thead><tbody></tbody></table><div class="empty" id="emptyState">Ничего не найдено.</div></div>
-<div style="text-align:center;margin-top:18px">
-    <button class="action pdf" id="loadMoreButton" type="button">Показать ещё</button>
-</div>
+<div class="table-wrap"><table id="priceTable"><thead><tr><th>№</th><th id="thCategory">Категория слушателей</th><th id="thProgram">Образовательная программа</th><th id="thHours">Часы</th><th id="thRemote">Дистанционно</th></tr></thead><tbody>
+<tr><td data-label='№'>1</td><td data-label='Категория' data-ru='Педагоги дошкольных организаций образования' data-kz='Мектепке дейінгі білім беру ұйымдарының педагогтері'>Педагоги дошкольных организаций образования</td><td data-label='Программа' data-ru='Профессиональное развитие руководителей и педагогов дошкольных организаций для обеспечения преемственности и эффективного взаимодействия с начальной школой' data-kz='Бастауыш мектептермен сабақтастықты және тиімді өзара әрекеттесуді қамтамасыз ету үшін мектепке дейінгі ұйымдардың басшылары мен педагогтерін кәсіби дамыту'>Профессиональное развитие руководителей и педагогов дошкольных организаций для обеспечения преемственности и эффективного взаимодействия с начальной школой</td><td data-label='Часы'>72</td><td data-label='Дистанционно'>23 000 ₸</td></tr>
+<tr><td data-label='№'>2</td><td data-label='Категория' data-ru='Педагоги дошкольных организаций образования' data-kz='Мектепке дейінгі білім беру ұйымдарының педагогтері'>Педагоги дошкольных организаций образования</td><td data-label='Программа' data-ru='Цифровая компетентность педагогов дошкольных организаций' data-kz='Мектепке дейінгі ұйымдар педагогтерінің цифрлық құзыреттілігі'>Цифровая компетентность педагогов дошкольных организаций</td><td data-label='Часы'>72</td><td data-label='Дистанционно'>23 000 ₸</td></tr>
+<tr><td data-label='№'>3</td><td data-label='Категория' data-ru='Преподаватели организаций технического и профессионального образования' data-kz='Кәсіптік және техникалық ББҰ оқытушылары'>Преподаватели организаций технического и профессионального образования</td><td data-label='Программа' data-ru='Глобальные компетенции в техническом и профессиональном образовании' data-kz='Техникалық және кәсіптік білім берудегі жаһандық құзыреттілік'>Глобальные компетенции в техническом и профессиональном образовании</td><td data-label='Часы'>72</td><td data-label='Дистанционно'>23 000 ₸</td></tr>
+<tr><td data-label='№'>4</td><td data-label='Категория' data-ru='Преподаватели организаций технического и профессионального образования' data-kz='Кәсіптік және техникалық ББҰ оқытушылары'>Преподаватели организаций технического и профессионального образования</td><td data-label='Программа' data-ru='Основные аспекты инклюзивного обучения в техническом и профессиональном образовании' data-kz='Техникалық және кәсіптік білім берудегі инклюзивті оқытудың негізгі аспектілері'>Основные аспекты инклюзивного обучения в техническом и профессиональном образовании</td><td data-label='Часы'>72</td><td data-label='Дистанционно'>23 000 ₸</td></tr>
+<tr><td data-label='№'>5</td><td data-label='Категория' data-ru='Преподаватели организаций технического и профессионального образования' data-kz='Кәсіптік және техникалық ББҰ оқытушылары'>Преподаватели организаций технического и профессионального образования</td><td data-label='Программа' data-ru='Развитие профессиональных компетенций педагогов-организаторов начальной военной и технологической подготовки' data-kz='Алғашқы әскери және технологиялық дайындық педагог-ұйымдастырушыларының кәсіби құзыреттіліктерін дамыту'>Развитие профессиональных компетенций педагогов-организаторов начальной военной и технологической подготовки</td><td data-label='Часы'>72</td><td data-label='Дистанционно'>23 000 ₸</td></tr>
+<tr><td data-label='№'>6</td><td data-label='Категория' data-ru='Учителя начальных классов' data-kz='Бастауыш сынып мұғалімдері'>Учителя начальных классов</td><td data-label='Программа' data-ru='Преемственность и взаимодействие педагогов в дошкольном воспитании и обучении и начальном образовании' data-kz='Мектепке дейінгі тәрбие мен білім беруде, оқытудың және бастауыш білім беруде педагогтар арасындағы сабақтастық пен өзара іс-қимыл'>Преемственность и взаимодействие педагогов в дошкольном воспитании и обучении и начальном образовании</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>7</td><td data-label='Категория' data-ru='Учителя начальных классов' data-kz='Бастауыш сынып мұғалімдері'>Учителя начальных классов</td><td data-label='Программа' data-ru='Формирование читательской грамотности на уроках литературного чтения' data-kz='Әдебиеттік оқу сабақтарында оқу сауаттылығын қалыптастыру'>Формирование читательской грамотности на уроках литературного чтения</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>8</td><td data-label='Категория' data-ru='Учителя начальных классов' data-kz='Бастауыш сынып мұғалімдері'>Учителя начальных классов</td><td data-label='Программа' data-ru='Исследовательская и проектная деятельность учащихся начальных классов' data-kz='Бастауыш сынып оқушыларының зерттеушілік және жобалық іс-әрекеті'>Исследовательская и проектная деятельность учащихся начальных классов</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>9</td><td data-label='Категория' data-ru='Учителя начальных классов' data-kz='Бастауыш сынып мұғалімдері'>Учителя начальных классов</td><td data-label='Программа' data-ru='Реализация ценностно-ориентированного подхода в начальной школе' data-kz='Бастауыш мектепте құндылыққа бағдарланған тәсілді жүзеге асыру'>Реализация ценностно-ориентированного подхода в начальной школе</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>10</td><td data-label='Категория' data-ru='Руководители и заместители руководителей организаций среднего образования' data-kz='Орта ББҰ басшылары мен орынбасарлары'>Руководители и заместители руководителей организаций среднего образования</td><td data-label='Программа' data-ru='Менеджмент в образовании' data-kz='Білім берудегі менеджмент'>Менеджмент в образовании</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>11</td><td data-label='Категория' data-ru='Заместители директоров организаций среднего образования по воспитательной работе' data-kz='Орта ББҰ директорларының тәрбие жұмысы жөніндегі орынбасарлары'>Заместители директоров организаций среднего образования по воспитательной работе</td><td data-label='Программа' data-ru='Менеджмент воспитательной работы' data-kz='Тәрбие жұмысының менеджменті'>Менеджмент воспитательной работы</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>12</td><td data-label='Категория' data-ru='Методисты методических центров (кабинетов), заместители директоров и методисты организаций образования' data-kz='Әдістемелік орталықтардың (кабинеттердің) әдіскерлері, ББҰ директорларының орынбасарлары, әдіскерлері'>Методисты методических центров (кабинетов), заместители директоров и методисты организаций образования</td><td data-label='Программа' data-ru='Трансформация методической службы' data-kz='Әдістемелік қызметті трансформациялау'>Трансформация методической службы</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>13</td><td data-label='Категория' data-ru='Учителя казахского языка и литературы школ с казахским языком обучения' data-kz='Қазақ тілінде оқытатын мектептердегі қазақ тілі мен қазақ әдебиеті пәні мұғалімдері'>Учителя казахского языка и литературы школ с казахским языком обучения</td><td data-label='Программа' data-ru='Развитие предметных и профессиональных компетенций педагогов по предметам «Казахский язык» и «Казахская литература» в школах с казахским языком обучения' data-kz='Қазақ тілінде оқытатын мектептердегі «Қазақ тілі» және «Қазақ әдебиеті» пәндері педагогтерінің пәндік және кәсіби құзыреттіліктерін дамыту'>Развитие предметных и профессиональных компетенций педагогов по предметам «Казахский язык» и «Казахская литература» в школах с казахским языком обучения</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>14</td><td data-label='Категория' data-ru='Учителя казахского языка и литературы школ с неказахским языком обучения' data-kz='Қазақ тілінде емес мектептердегі қазақ тілі мен әдебиеті пәні мұғалімдері'>Учителя казахского языка и литературы школ с неказахским языком обучения</td><td data-label='Программа' data-ru='Развитие предметных и профессиональных компетенций педагогов предмета «Казахский язык и литература» (Я2)' data-kz='«Қазақ тілі мен әдебиеті» (Т2) пәні педагогтерінің пәндік және кәсіби құзыреттіліктерін дамыту'>Развитие предметных и профессиональных компетенций педагогов предмета «Казахский язык и литература» (Я2)</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>15</td><td data-label='Категория' data-ru='Учителя казахского языка и литературы организаций среднего образования' data-kz='Орта ББҰ қазақ тілі мен әдебиеті пәні мұғалімдері'>Учителя казахского языка и литературы организаций среднего образования</td><td data-label='Программа' data-ru='Развитие навыков читательской грамотности в межпредметном контексте при обучении казахскому языку и литературе' data-kz='Қазақ тілі мен әдебиетін оқытуда оқу сауаттылығы дағдыларын пәнаралық контексте дамыту'>Развитие навыков читательской грамотности в межпредметном контексте при обучении казахскому языку и литературе</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>16</td><td data-label='Категория' data-ru='Учителя русского языка и литературы организаций среднего образования с нерусским языком обучения' data-kz='Учителя русского языка и литературы организаций среднего образования с нерусским языком обучения'>Учителя русского языка и литературы организаций среднего образования с нерусским языком обучения</td><td data-label='Программа' data-ru='Формирование читательской грамотности на уроках русского языка и литературы Я2' data-kz='Формирование читательской грамотности на уроках русского языка и литературы Я2'>Формирование читательской грамотности на уроках русского языка и литературы Я2</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>17</td><td data-label='Категория' data-ru='Педагоги русского языка и литературы организаций образования на русском языке' data-kz='Педагоги русского языка и литературы организаций образования на русском языке'>Педагоги русского языка и литературы организаций образования на русском языке</td><td data-label='Программа' data-ru='Формирование читательской грамотности на уроках русского языка и литературы' data-kz='Формирование читательской грамотности на уроках русского языка и литературы'>Формирование читательской грамотности на уроках русского языка и литературы</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>18</td><td data-label='Категория' data-ru='Учителя английского языка' data-kz='Ағылшын тілі пәні мұғалімдері'>Учителя английского языка</td><td data-label='Программа' data-ru='Инновационные технологии в преподавании английского языка' data-kz='Ағылшын тілін оқытудағы инновациялық технологиялар'>Инновационные технологии в преподавании английского языка</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>19</td><td data-label='Категория' data-ru='Учителя английского языка' data-kz='Ағылшын тілі пәні мұғалімдері'>Учителя английского языка</td><td data-label='Программа' data-ru='Развитие рецептивных и продуктивных навыков в преподавании и изучении английского языка' data-kz='Ағылшын тілін оқыту мен оқуда рецептивті және продуктивті дағдыларды дамыту'>Развитие рецептивных и продуктивных навыков в преподавании и изучении английского языка</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>20</td><td data-label='Категория' data-ru='Учителя математики' data-kz='Математика мұғалімдері'>Учителя математики</td><td data-label='Программа' data-ru='Преподавание математики: современные тенденции и методики' data-kz='Математиканы оқыту: қазіргі тенденциялар мен әдістемелер'>Преподавание математики: современные тенденции и методики</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>21</td><td data-label='Категория' data-ru='Учителя математики' data-kz='Математика мұғалімдері'>Учителя математики</td><td data-label='Программа' data-ru='Функциональная математическая грамотность: методы и технологии' data-kz='Функционалды математикалық сауаттылық: әдістер мен технологиялар'>Функциональная математическая грамотность: методы и технологии</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>22</td><td data-label='Категория' data-ru='Учителя физики' data-kz='Физика пәні мұғалімдері'>Учителя физики</td><td data-label='Программа' data-ru='Практико-ориентированное преподавание физики на основе межпредметной интеграции' data-kz='Пәнаралық интеграция негізінде физика пәнін тәжірибеге бағыттап оқыту'>Практико-ориентированное преподавание физики на основе межпредметной интеграции</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>23</td><td data-label='Категория' data-ru='Учителя химии' data-kz='Химия пәні мұғалімдері'>Учителя химии</td><td data-label='Программа' data-ru='Инновации и современные технологии в преподавании химии' data-kz='Химияны оқытудағы инновациялар мен заманауи технологиялар'>Инновации и современные технологии в преподавании химии</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>24</td><td data-label='Категория' data-ru='Учителя биологии' data-kz='Биология пәні мұғалімдері'>Учителя биологии</td><td data-label='Программа' data-ru='Развитие естественно-научной грамотности на уроках биологии' data-kz='Биология сабақтарында ғылыми-жаратылыстану сауаттылығын дамыту'>Развитие естественно-научной грамотности на уроках биологии</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>25</td><td data-label='Категория' data-ru='Учителя географии' data-kz='География пәні мұғалімдері'>Учителя географии</td><td data-label='Программа' data-ru='Эффективные способы изучения аспектов охраны окружающей среды на уроках географии' data-kz='Қоршаған ортаны қорғау аспектілерін география пәнінде оқытудың тиімді жолдары'>Эффективные способы изучения аспектов охраны окружающей среды на уроках географии</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>26</td><td data-label='Категория' data-ru='Учителя истории и основ права' data-kz='Тарих және құқық негіздері пәндері мұғалімдері'>Учителя истории и основ права</td><td data-label='Программа' data-ru='История и основы права: новые технологии в обучении' data-kz='Тарих және құқық негіздері: оқытудағы жаңа технологиялар'>История и основы права: новые технологии в обучении</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>27</td><td data-label='Категория' data-ru='Преподаватели-организаторы начальной военной и технологической подготовки организаций среднего образования' data-kz='Орта ББҰ алғашқы әскери және технологиялық дайындықты оқытушы-ұйымдастырушылары'>Преподаватели-организаторы начальной военной и технологической подготовки организаций среднего образования</td><td data-label='Программа' data-ru='Эффективные стратегии преподавания начальной военной и технологической подготовки' data-kz='Алғашқы әскери және технологиялық дайындықты оқытудың тиімді стратегиялары'>Эффективные стратегии преподавания начальной военной и технологической подготовки</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>28</td><td data-label='Категория' data-ru='Учителя музыки' data-kz='Музыка пәні мұғалімдері'>Учителя музыки</td><td data-label='Программа' data-ru='Интеграция национальных ценностей через содержание предмета «Музыка»' data-kz='«Музыка» пәнінің мазмұны арқылы ұлттық құндылықтарды интеграциялау'>Интеграция национальных ценностей через содержание предмета «Музыка»</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>29</td><td data-label='Категория' data-ru='Педагоги организаций среднего образования' data-kz='Орта ББҰ педагогтері'>Педагоги организаций среднего образования</td><td data-label='Программа' data-ru='Глобальные компетенции' data-kz='Жаһандық құзыреттер'>Глобальные компетенции</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>30</td><td data-label='Категория' data-ru='Педагоги организаций среднего образования' data-kz='Орта ББҰ педагогтері'>Педагоги организаций среднего образования</td><td data-label='Программа' data-ru='Формирование базовых компетенций педагогов, реализующих инклюзивное образование' data-kz='Инклюзивті білім беруді іске асыратын педагогтердің базалық құзыреттерін қалыптастыру'>Формирование базовых компетенций педагогов, реализующих инклюзивное образование</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>31</td><td data-label='Категория' data-ru='Педагоги организаций среднего образования' data-kz='Орта ББҰ педагогтері'>Педагоги организаций среднего образования</td><td data-label='Программа' data-ru='Наставничество в профессиональном развитии молодого педагога' data-kz='Жас педагогтің кәсіби дамуындағы тәлімгерлік'>Наставничество в профессиональном развитии молодого педагога</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>32</td><td data-label='Категория' data-ru='Педагоги организаций среднего образования' data-kz='Орта ББҰ педагогтері'>Педагоги организаций среднего образования</td><td data-label='Программа' data-ru='Деятельность школы по профессиональной ориентации обучающихся' data-kz='Білім алушыны кәсіби бағдарлаудағы мектептің іс-әрекеті'>Деятельность школы по профессиональной ориентации обучающихся</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>33</td><td data-label='Категория' data-ru='Учителя-предметники организаций среднего образования' data-kz='Орта ББҰ пән мұғалімдері'>Учителя-предметники организаций среднего образования</td><td data-label='Программа' data-ru='SMART-обучение: основные принципы организации учебного процесса' data-kz='SMART-оқыту: оқу процесін ұйымдастырудың негізгі қағидаттары'>SMART-обучение: основные принципы организации учебного процесса</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>34</td><td data-label='Категория' data-ru='Учителя изобразительного искусства и художественного труда организаций среднего образования' data-kz='Орта ББҰ бейнелеу өнері, көркем еңбек пән мұғалімдері'>Учителя изобразительного искусства и художественного труда организаций среднего образования</td><td data-label='Программа' data-ru='Повышение профессиональной компетентности учителей в области дизайна и художественного моделирования' data-kz='Дизайн және көркемдік модельдеу саласында мұғалімдердің кәсіби құзыреттілігін арттыру'>Повышение профессиональной компетентности учителей в области дизайна и художественного моделирования</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>35</td><td data-label='Категория' data-ru='Руководители летних оздоровительных лагерей, воспитатели, старшие вожатые и социальные педагоги' data-kz='Жазғы сауықтыру лагері басшылары, тәрбиешілер, аға тәлімгерлер, әлеуметтік педагогтер'>Руководители летних оздоровительных лагерей, воспитатели, старшие вожатые и социальные педагоги</td><td data-label='Программа' data-ru='Методические основы организации деятельности детского летнего оздоровительного лагеря' data-kz='Балалардың жазғы сауықтыру лагерінің қызметін ұйымдастырудың әдістемелік негіздері'>Методические основы организации деятельности детского летнего оздоровительного лагеря</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>36</td><td data-label='Категория' data-ru='Педагоги малокомплектных школ' data-kz='Шағын жинақты мектептердің педагогтері'>Педагоги малокомплектных школ</td><td data-label='Программа' data-ru='Использование цифровых ресурсов в преподавании предметов' data-kz='Пәндерді оқытуда цифрлық ресурстарды пайдалану'>Использование цифровых ресурсов в преподавании предметов</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>37</td><td data-label='Категория' data-ru='Педагоги естественно-научных дисциплин организаций среднего образования' data-kz='Орта ББҰ жаратылыстану пәндерінің педагогтері'>Педагоги естественно-научных дисциплин организаций среднего образования</td><td data-label='Программа' data-ru='Робототехника и STEM-образование' data-kz='Робототехника және STEM-білім беру'>Робототехника и STEM-образование</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>38</td><td data-label='Категория' data-ru='Воспитатели интернатных организаций' data-kz='Интернаттық ұйымдардың тәрбиешілері'>Воспитатели интернатных организаций</td><td data-label='Программа' data-ru='Создание развивающей и поддерживающей среды в интернатных организациях образования' data-kz='Интернаттық білім беру ұйымдарында дамытушы және қолдаушы орта құру'>Создание развивающей и поддерживающей среды в интернатных организациях образования</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>39</td><td data-label='Категория' data-ru='Учителя информатики' data-kz='Информатика пәні мұғалімдері'>Учителя информатики</td><td data-label='Программа' data-ru='Проектная деятельность по учебному предмету «Информатика»' data-kz='«Информатика» оқу пәні бойынша жобалық іс-әрекет'>Проектная деятельность по учебному предмету «Информатика»</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>40</td><td data-label='Категория' data-ru='Учителя информатики 5–10 классов' data-kz='5–10 сыныптар бойынша информатика мұғалімдері'>Учителя информатики 5–10 классов</td><td data-label='Программа' data-ru='Методика и практика преподавания языка программирования Python' data-kz='Python бағдарламалау тілін оқытудың әдістемесі мен тәжірибесі'>Методика и практика преподавания языка программирования Python</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>41</td><td data-label='Категория' data-ru='Педагоги-ассистенты' data-kz='Педагог-ассистенттер'>Педагоги-ассистенты</td><td data-label='Программа' data-ru='Развитие профессиональной компетентности педагога-ассистента по сопровождению детей с особыми образовательными потребностями' data-kz='Білім беру ұйымдарындағы ерекше білім беру қажеттілігі бар балаларды сүйемелдеу бойынша педагог-ассистенттің кәсіби құзыреттілігін дамыту'>Развитие профессиональной компетентности педагога-ассистента по сопровождению детей с особыми образовательными потребностями</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>42</td><td data-label='Категория' data-ru='Педагоги-ассистенты' data-kz='Педагог-ассистенттер'>Педагоги-ассистенты</td><td data-label='Программа' data-ru='Психолого-педагогическое сопровождение детей с особыми образовательными потребностями в общеобразовательной школе' data-kz='Жалпы білім беретін мектепте ерекше білім беру қажеттіліктері бар балаларды психологиялық-педагогикалық сүйемелдеу'>Психолого-педагогическое сопровождение детей с особыми образовательными потребностями в общеобразовательной школе</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>43</td><td data-label='Категория' data-ru='Воспитатели (старшие воспитатели) специальных организаций образования' data-kz='Арнайы ББҰ тәрбиешілері (аға тәрбиешілері)'>Воспитатели (старшие воспитатели) специальных организаций образования</td><td data-label='Программа' data-ru='Организация учебно-воспитательного и коррекционного процесса в специальных организациях образования' data-kz='Арнайы білім беру ұйымдарында оқу-тәрбие және түзету процесін ұйымдастыру'>Организация учебно-воспитательного и коррекционного процесса в специальных организациях образования</td><td data-label='Часы'>80</td><td data-label='Дистанционно'>25 000 ₸</td></tr>
+<tr><td data-label='№'>44</td><td data-label='Категория' data-ru='По запросу организаций образования и выбранным темам' data-kz='Білім беру ұйымдарының сұранысы мен таңдау тақырыптары бойынша'>По запросу организаций образования и выбранным темам</td><td data-label='Программа' data-ru='Семинар / вебинар / тренинг' data-kz='Семинар / вебинар / тренинг'>Семинар / вебинар / тренинг</td><td data-label='Часы'>1 күн</td><td data-label='Дистанционно'>4 000 ₸</td></tr>
+<tr><td data-label='№'>45</td><td data-label='Категория' data-ru='Педагоги области' data-kz='Облыс педагогтері'>Педагоги области</td><td data-label='Программа' data-ru='Журнал «Маңғыстау әдіскері» — публикация статьи' data-kz='«Маңғыстау әдіскері» журналы — мақала жариялау'>Журнал «Маңғыстау әдіскері» — публикация статьи</td><td data-label='Часы'>—</td><td data-label='Дистанционно'>6 700 ₸</td></tr>
+</tbody></table><div class="empty" id="emptyState">Ничего не найдено.</div></div>
 <div class="note" id="registryNote">Все курсы включены в реестр программ повышения квалификации Министерства просвещения Республики Казахстан.</div>
 <div class="contacts"><div class="contact"><strong>Байсарова Алия Маскаровна</strong><br><a href="tel:+77014960499">+7 701 496 04 99</a></div><div class="contact"><strong>Адилгазиева Алтынай Тулегеновна</strong><br><a href="tel:+77787026222">+7 778 702 62 22</a></div><div class="contact"><strong>Самарбаева Улмекен Исатаевна</strong><br><a href="tel:+77713246730">+7 771 324 67 30</a></div></div>
 </main>
-<div class="tour-overlay" id="tourOverlay" role="dialog" aria-modal="true" aria-labelledby="tourTitle">
-  <div class="tour-card">
-    <div class="tour-badge" id="tourBadge">👋 Знакомство с сайтом</div>
-    <h2 id="tourTitle">Добро пожаловать!</h2>
-    <p id="tourText">За несколько шагов покажем, как быстро найти нужный курс и узнать стоимость.</p>
-    <div class="tour-progress" id="tourProgress" aria-hidden="true"></div>
-    <div class="tour-actions">
-      <button class="tour-btn secondary" id="tourSkip" type="button">Пропустить</button>
-      <button class="tour-btn primary" id="tourNext" type="button">Далее</button>
+<div class="welcome-overlay" id="welcomeOverlay" role="dialog" aria-modal="true">
+  <div class="welcome-card">
+    <div class="welcome-icon">👋</div>
+    <h2 id="welcomeTitle">Добро пожаловать в ORLEU</h2>
+    <p id="welcomeText">Здесь вы можете быстро найти курс, посмотреть стоимость и связаться с институтом.</p>
+    <div class="welcome-list">
+      <div class="welcome-item" id="welcomeItem1">🔎 Найти нужный курс</div>
+      <div class="welcome-item" id="welcomeItem2">💰 Посмотреть стоимость</div>
+      <div class="welcome-item" id="welcomeItem3">🌐 Переключить язык RU/KZ</div>
+      <div class="welcome-item" id="welcomeItem4">💬 Написать в WhatsApp</div>
     </div>
+    <button class="welcome-start" id="welcomeStart" type="button">Начать</button>
   </div>
 </div>
-<button class="tour-help" id="tourHelp" type="button" aria-label="Показать подсказки">?</button>
+<button class="help-button" id="helpButton" type="button" aria-label="Открыть подсказку">?</button>
 <footer id="siteFooter">© 2026 ORLEU. Все права защищены.</footer>
 <script>
-const translations={ru:{title:"Прайс-лист",subtitle:"Перечень курсов повышения квалификации педагогов на 2026 год",search:"Поиск по категории или названию программы…",pdf:"📄 Открыть PDF",wa:"💬 Уточнить стоимость",category:"Категория слушателей",program:"Образовательная программа",hours:"Часы",remote:"Дистанционно",onsite:"Аудиторно",empty:"Ничего не найдено.",more:"Показать ещё",footer:"© 2026 ORLEU. Все права защищены.",note:"Все курсы включены в реестр программ повышения квалификации Министерства просвещения Республики Казахстан."},kz:{title:"Прайс-парақ",subtitle:"Педагогтердің біліктіліктерін арттыру курстарының тізімі (2026 жыл)",search:"Санат немесе бағдарлама атауы бойынша іздеу…",pdf:"📄 PDF ашу",wa:"💬 Бағаны нақтылау",category:"Тыңдаушылар санаты",program:"Білім беру бағдарламасы",hours:"Сағат саны",remote:"Қашықтан",onsite:"Аудиториялық",empty:"Ештеңе табылмады.",more:"Тағы көрсету",footer:"© 2026 ORLEU. Барлық құқықтар қорғалған.",note:"Барлық курстар ҚР Оқу-ағарту министрлігінің біліктілікті арттыру бағдарламаларының реестріне енгізілген."}};
-let appReady=false;
-let currentLang=localStorage.getItem("orleuLanguage")==="kz"?"kz":"ru";
-function setLang(lang){const t=translations[lang]||translations.ru;document.documentElement.lang=lang==="kz"?"kk":"ru";pageTitle.textContent=t.title;pageSubtitle.textContent=t.subtitle;searchInput.placeholder=t.search;pdfButton.textContent=t.pdf;waButton.textContent=t.wa;thCategory.textContent=t.category;thProgram.textContent=t.program;thHours.textContent=t.hours;thRemote.textContent=t.remote;thOnsite.textContent=t.onsite;emptyState.textContent=t.empty;registryNote.textContent=t.note;siteFooter.textContent=t.footer;document.querySelectorAll("[data-"+lang+"]").forEach(el=>el.textContent=el.dataset[lang]);
+const translations={ru:{title:"Прайс-лист",subtitle:"Перечень курсов повышения квалификации педагогов на 2026 год",search:"Поиск по категории или названию программы…",pdf:"📄 Открыть PDF",wa:"💬 Уточнить стоимость",category:"Категория слушателей",program:"Образовательная программа",hours:"Часы",remote:"Дистанционно",onsite:"Аудиторно",empty:"Ничего не найдено.",footer:"© 2026 ORLEU. Все права защищены.",note:"Все курсы включены в реестр программ повышения квалификации Министерства просвещения Республики Казахстан.",welcomeTitle:"Добро пожаловать в ORLEU",welcomeText:"Здесь вы можете быстро найти курс, посмотреть стоимость и связаться с институтом.",welcome1:"🔎 Найти нужный курс",welcome2:"💰 Посмотреть стоимость",welcome3:"🌐 Переключить язык RU/KZ",welcome4:"💬 Написать в WhatsApp",welcomeStart:"Начать"},kz:{title:"Прайс-парақ",subtitle:"Педагогтердің біліктіліктерін арттыру курстарының тізімі (2026 жыл)",search:"Санат немесе бағдарлама атауы бойынша іздеу…",pdf:"📄 PDF ашу",wa:"💬 Бағаны нақтылау",category:"Тыңдаушылар санаты",program:"Білім беру бағдарламасы",hours:"Сағат саны",remote:"Қашықтан",onsite:"Аудиториялық",empty:"Ештеңе табылмады.",footer:"© 2026 ORLEU. Барлық құқықтар қорғалған.",note:"Барлық курстар ҚР Оқу-ағарту министрлігінің біліктілікті арттыру бағдарламаларының реестріне енгізілген.",welcomeTitle:"ORLEU сайтына қош келдіңіз",welcomeText:"Мұнда курсты жылдам тауып, бағасын көріп және институтпен байланыса аласыз.",welcome1:"🔎 Қажетті курсты табу",welcome2:"💰 Бағасын көру",welcome3:"🌐 RU/KZ тілін ауыстыру",welcome4:"💬 WhatsApp арқылы жазу",welcomeStart:"Бастау"}};
+function setLang(lang){const t=translations[lang]||translations.ru;document.documentElement.lang=lang==="kz"?"kk":"ru";pageTitle.textContent=t.title;pageSubtitle.textContent=t.subtitle;searchInput.placeholder=t.search;pdfButton.textContent=t.pdf;waButton.textContent=t.wa;thCategory.textContent=t.category;thProgram.textContent=t.program;thHours.textContent=t.hours;thRemote.textContent=t.remote;emptyState.textContent=t.empty;registryNote.textContent=t.note;siteFooter.textContent=t.footer;welcomeTitle.textContent=t.welcomeTitle;welcomeText.textContent=t.welcomeText;welcomeItem1.textContent=t.welcome1;welcomeItem2.textContent=t.welcome2;welcomeItem3.textContent=t.welcome3;welcomeItem4.textContent=t.welcome4;welcomeStart.textContent=t.welcomeStart;document.querySelectorAll("[data-"+lang+"]").forEach(el=>el.textContent=el.dataset[lang]);
 document.querySelectorAll("#priceTable tbody tr").forEach(row=>{
     const cells=row.querySelectorAll("td");
     if(cells[1]) cells[1].setAttribute("data-label",t.category);
     if(cells[2]) cells[2].setAttribute("data-label",t.program);
     if(cells[3]) cells[3].setAttribute("data-label",t.hours);
     if(cells[4]) cells[4].setAttribute("data-label",t.remote);
-    if(cells[5]) cells[5].setAttribute("data-label",t.onsite);
-});document.querySelectorAll(".lang-btn").forEach(b=>b.classList.remove("active"));document.getElementById(lang+"Button").classList.add("active");localStorage.setItem("orleuLanguage",lang);currentLang=lang;if(appReady&&typeof renderRows==="function")renderRows()}
+    
+});document.querySelectorAll(".lang-btn").forEach(b=>b.classList.remove("active"));document.getElementById(lang+"Button").classList.add("active");localStorage.setItem("orleuLanguage",lang)}
 kzButton.addEventListener("click",()=>setLang("kz"));ruButton.addEventListener("click",()=>setLang("ru"));setLang(localStorage.getItem("orleuLanguage")==="kz"?"kz":"ru");
-
-const priceData=[{"n":1,"cat_ru":"Педагоги дошкольных организаций образования","cat_kz":"Мектепке дейінгі білім беру ұйымдарының педагогтері","prog_ru":"Профессиональное развитие руководителей и педагогов дошкольных организаций для обеспечения преемственности и эффективного взаимодействия с начальной школой","prog_kz":"Бастауыш мектептермен сабақтастықты және тиімді өзара әрекеттесуді қамтамасыз ету үшін мектепке дейінгі ұйымдардың басшылары мен педагогтерін кәсіби дамыту","hours":"72","remote":"23 000 ₸","onsite":"91 677 ₸"},{"n":2,"cat_ru":"Педагоги дошкольных организаций образования","cat_kz":"Мектепке дейінгі білім беру ұйымдарының педагогтері","prog_ru":"Цифровая компетентность педагогов дошкольных организаций","prog_kz":"Мектепке дейінгі ұйымдар педагогтерінің цифрлық құзыреттілігі","hours":"72","remote":"23 000 ₸","onsite":"91 677 ₸"},{"n":3,"cat_ru":"Преподаватели организаций технического и профессионального образования","cat_kz":"Кәсіптік және техникалық ББҰ оқытушылары","prog_ru":"Глобальные компетенции в техническом и профессиональном образовании","prog_kz":"Техникалық және кәсіптік білім берудегі жаһандық құзыреттілік","hours":"72","remote":"23 000 ₸","onsite":"91 677 ₸"},{"n":4,"cat_ru":"Преподаватели организаций технического и профессионального образования","cat_kz":"Кәсіптік және техникалық ББҰ оқытушылары","prog_ru":"Основные аспекты инклюзивного обучения в техническом и профессиональном образовании","prog_kz":"Техникалық және кәсіптік білім берудегі инклюзивті оқытудың негізгі аспектілері","hours":"72","remote":"23 000 ₸","onsite":"91 677 ₸"},{"n":5,"cat_ru":"Преподаватели организаций технического и профессионального образования","cat_kz":"Кәсіптік және техникалық ББҰ оқытушылары","prog_ru":"Развитие профессиональных компетенций педагогов-организаторов начальной военной и технологической подготовки","prog_kz":"Алғашқы әскери және технологиялық дайындық педагог-ұйымдастырушыларының кәсіби құзыреттіліктерін дамыту","hours":"72","remote":"23 000 ₸","onsite":"91 677 ₸"},{"n":6,"cat_ru":"Учителя начальных классов","cat_kz":"Бастауыш сынып мұғалімдері","prog_ru":"Преемственность и взаимодействие педагогов в дошкольном воспитании и обучении и начальном образовании","prog_kz":"Мектепке дейінгі тәрбие мен білім беруде, оқытудың және бастауыш білім беруде педагогтар арасындағы сабақтастық пен өзара іс-қимыл","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":7,"cat_ru":"Учителя начальных классов","cat_kz":"Бастауыш сынып мұғалімдері","prog_ru":"Формирование читательской грамотности на уроках литературного чтения","prog_kz":"Әдебиеттік оқу сабақтарында оқу сауаттылығын қалыптастыру","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":8,"cat_ru":"Учителя начальных классов","cat_kz":"Бастауыш сынып мұғалімдері","prog_ru":"Исследовательская и проектная деятельность учащихся начальных классов","prog_kz":"Бастауыш сынып оқушыларының зерттеушілік және жобалық іс-әрекеті","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":9,"cat_ru":"Учителя начальных классов","cat_kz":"Бастауыш сынып мұғалімдері","prog_ru":"Реализация ценностно-ориентированного подхода в начальной школе","prog_kz":"Бастауыш мектепте құндылыққа бағдарланған тәсілді жүзеге асыру","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":10,"cat_ru":"Руководители и заместители руководителей организаций среднего образования","cat_kz":"Орта ББҰ басшылары мен орынбасарлары","prog_ru":"Менеджмент в образовании","prog_kz":"Білім берудегі менеджмент","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":11,"cat_ru":"Заместители директоров организаций среднего образования по воспитательной работе","cat_kz":"Орта ББҰ директорларының тәрбие жұмысы жөніндегі орынбасарлары","prog_ru":"Менеджмент воспитательной работы","prog_kz":"Тәрбие жұмысының менеджменті","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":12,"cat_ru":"Методисты методических центров (кабинетов), заместители директоров и методисты организаций образования","cat_kz":"Әдістемелік орталықтардың (кабинеттердің) әдіскерлері, ББҰ директорларының орынбасарлары, әдіскерлері","prog_ru":"Трансформация методической службы","prog_kz":"Әдістемелік қызметті трансформациялау","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":13,"cat_ru":"Учителя казахского языка и литературы школ с казахским языком обучения","cat_kz":"Қазақ тілінде оқытатын мектептердегі қазақ тілі мен қазақ әдебиеті пәні мұғалімдері","prog_ru":"Развитие предметных и профессиональных компетенций педагогов по предметам «Казахский язык» и «Казахская литература» в школах с казахским языком обучения","prog_kz":"Қазақ тілінде оқытатын мектептердегі «Қазақ тілі» және «Қазақ әдебиеті» пәндері педагогтерінің пәндік және кәсіби құзыреттіліктерін дамыту","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":14,"cat_ru":"Учителя казахского языка и литературы школ с неказахским языком обучения","cat_kz":"Қазақ тілінде емес мектептердегі қазақ тілі мен әдебиеті пәні мұғалімдері","prog_ru":"Развитие предметных и профессиональных компетенций педагогов предмета «Казахский язык и литература» (Я2)","prog_kz":"«Қазақ тілі мен әдебиеті» (Т2) пәні педагогтерінің пәндік және кәсіби құзыреттіліктерін дамыту","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":15,"cat_ru":"Учителя казахского языка и литературы организаций среднего образования","cat_kz":"Орта ББҰ қазақ тілі мен әдебиеті пәні мұғалімдері","prog_ru":"Развитие навыков читательской грамотности в межпредметном контексте при обучении казахскому языку и литературе","prog_kz":"Қазақ тілі мен әдебиетін оқытуда оқу сауаттылығы дағдыларын пәнаралық контексте дамыту","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":16,"cat_ru":"Учителя русского языка и литературы организаций среднего образования с нерусским языком обучения","cat_kz":"Учителя русского языка и литературы организаций среднего образования с нерусским языком обучения","prog_ru":"Формирование читательской грамотности на уроках русского языка и литературы Я2","prog_kz":"Формирование читательской грамотности на уроках русского языка и литературы Я2","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":17,"cat_ru":"Педагоги русского языка и литературы организаций образования на русском языке","cat_kz":"Педагоги русского языка и литературы организаций образования на русском языке","prog_ru":"Формирование читательской грамотности на уроках русского языка и литературы","prog_kz":"Формирование читательской грамотности на уроках русского языка и литературы","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":18,"cat_ru":"Учителя английского языка","cat_kz":"Ағылшын тілі пәні мұғалімдері","prog_ru":"Инновационные технологии в преподавании английского языка","prog_kz":"Ағылшын тілін оқытудағы инновациялық технологиялар","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":19,"cat_ru":"Учителя английского языка","cat_kz":"Ағылшын тілі пәні мұғалімдері","prog_ru":"Развитие рецептивных и продуктивных навыков в преподавании и изучении английского языка","prog_kz":"Ағылшын тілін оқыту мен оқуда рецептивті және продуктивті дағдыларды дамыту","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":20,"cat_ru":"Учителя математики","cat_kz":"Математика мұғалімдері","prog_ru":"Преподавание математики: современные тенденции и методики","prog_kz":"Математиканы оқыту: қазіргі тенденциялар мен әдістемелер","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":21,"cat_ru":"Учителя математики","cat_kz":"Математика мұғалімдері","prog_ru":"Функциональная математическая грамотность: методы и технологии","prog_kz":"Функционалды математикалық сауаттылық: әдістер мен технологиялар","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":22,"cat_ru":"Учителя физики","cat_kz":"Физика пәні мұғалімдері","prog_ru":"Практико-ориентированное преподавание физики на основе межпредметной интеграции","prog_kz":"Пәнаралық интеграция негізінде физика пәнін тәжірибеге бағыттап оқыту","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":23,"cat_ru":"Учителя химии","cat_kz":"Химия пәні мұғалімдері","prog_ru":"Инновации и современные технологии в преподавании химии","prog_kz":"Химияны оқытудағы инновациялар мен заманауи технологиялар","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":24,"cat_ru":"Учителя биологии","cat_kz":"Биология пәні мұғалімдері","prog_ru":"Развитие естественно-научной грамотности на уроках биологии","prog_kz":"Биология сабақтарында ғылыми-жаратылыстану сауаттылығын дамыту","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":25,"cat_ru":"Учителя географии","cat_kz":"География пәні мұғалімдері","prog_ru":"Эффективные способы изучения аспектов охраны окружающей среды на уроках географии","prog_kz":"Қоршаған ортаны қорғау аспектілерін география пәнінде оқытудың тиімді жолдары","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":26,"cat_ru":"Учителя истории и основ права","cat_kz":"Тарих және құқық негіздері пәндері мұғалімдері","prog_ru":"История и основы права: новые технологии в обучении","prog_kz":"Тарих және құқық негіздері: оқытудағы жаңа технологиялар","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":27,"cat_ru":"Преподаватели-организаторы начальной военной и технологической подготовки организаций среднего образования","cat_kz":"Орта ББҰ алғашқы әскери және технологиялық дайындықты оқытушы-ұйымдастырушылары","prog_ru":"Эффективные стратегии преподавания начальной военной и технологической подготовки","prog_kz":"Алғашқы әскери және технологиялық дайындықты оқытудың тиімді стратегиялары","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":28,"cat_ru":"Учителя музыки","cat_kz":"Музыка пәні мұғалімдері","prog_ru":"Интеграция национальных ценностей через содержание предмета «Музыка»","prog_kz":"«Музыка» пәнінің мазмұны арқылы ұлттық құндылықтарды интеграциялау","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":29,"cat_ru":"Педагоги организаций среднего образования","cat_kz":"Орта ББҰ педагогтері","prog_ru":"Глобальные компетенции","prog_kz":"Жаһандық құзыреттер","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":30,"cat_ru":"Педагоги организаций среднего образования","cat_kz":"Орта ББҰ педагогтері","prog_ru":"Формирование базовых компетенций педагогов, реализующих инклюзивное образование","prog_kz":"Инклюзивті білім беруді іске асыратын педагогтердің базалық құзыреттерін қалыптастыру","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":31,"cat_ru":"Педагоги организаций среднего образования","cat_kz":"Орта ББҰ педагогтері","prog_ru":"Наставничество в профессиональном развитии молодого педагога","prog_kz":"Жас педагогтің кәсіби дамуындағы тәлімгерлік","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":32,"cat_ru":"Педагоги организаций среднего образования","cat_kz":"Орта ББҰ педагогтері","prog_ru":"Деятельность школы по профессиональной ориентации обучающихся","prog_kz":"Білім алушыны кәсіби бағдарлаудағы мектептің іс-әрекеті","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":33,"cat_ru":"Учителя-предметники организаций среднего образования","cat_kz":"Орта ББҰ пән мұғалімдері","prog_ru":"SMART-обучение: основные принципы организации учебного процесса","prog_kz":"SMART-оқыту: оқу процесін ұйымдастырудың негізгі қағидаттары","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":34,"cat_ru":"Учителя изобразительного искусства и художественного труда организаций среднего образования","cat_kz":"Орта ББҰ бейнелеу өнері, көркем еңбек пән мұғалімдері","prog_ru":"Повышение профессиональной компетентности учителей в области дизайна и художественного моделирования","prog_kz":"Дизайн және көркемдік модельдеу саласында мұғалімдердің кәсіби құзыреттілігін арттыру","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":35,"cat_ru":"Руководители летних оздоровительных лагерей, воспитатели, старшие вожатые и социальные педагоги","cat_kz":"Жазғы сауықтыру лагері басшылары, тәрбиешілер, аға тәлімгерлер, әлеуметтік педагогтер","prog_ru":"Методические основы организации деятельности детского летнего оздоровительного лагеря","prog_kz":"Балалардың жазғы сауықтыру лагерінің қызметін ұйымдастырудың әдістемелік негіздері","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":36,"cat_ru":"Педагоги малокомплектных школ","cat_kz":"Шағын жинақты мектептердің педагогтері","prog_ru":"Использование цифровых ресурсов в преподавании предметов","prog_kz":"Пәндерді оқытуда цифрлық ресурстарды пайдалану","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":37,"cat_ru":"Педагоги естественно-научных дисциплин организаций среднего образования","cat_kz":"Орта ББҰ жаратылыстану пәндерінің педагогтері","prog_ru":"Робототехника и STEM-образование","prog_kz":"Робототехника және STEM-білім беру","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":38,"cat_ru":"Воспитатели интернатных организаций","cat_kz":"Интернаттық ұйымдардың тәрбиешілері","prog_ru":"Создание развивающей и поддерживающей среды в интернатных организациях образования","prog_kz":"Интернаттық білім беру ұйымдарында дамытушы және қолдаушы орта құру","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":39,"cat_ru":"Учителя информатики","cat_kz":"Информатика пәні мұғалімдері","prog_ru":"Проектная деятельность по учебному предмету «Информатика»","prog_kz":"«Информатика» оқу пәні бойынша жобалық іс-әрекет","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":40,"cat_ru":"Учителя информатики 5–10 классов","cat_kz":"5–10 сыныптар бойынша информатика мұғалімдері","prog_ru":"Методика и практика преподавания языка программирования Python","prog_kz":"Python бағдарламалау тілін оқытудың әдістемесі мен тәжірибесі","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":41,"cat_ru":"Педагоги-ассистенты","cat_kz":"Педагог-ассистенттер","prog_ru":"Развитие профессиональной компетентности педагога-ассистента по сопровождению детей с особыми образовательными потребностями","prog_kz":"Білім беру ұйымдарындағы ерекше білім беру қажеттілігі бар балаларды сүйемелдеу бойынша педагог-ассистенттің кәсіби құзыреттілігін дамыту","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":42,"cat_ru":"Педагоги-ассистенты","cat_kz":"Педагог-ассистенттер","prog_ru":"Психолого-педагогическое сопровождение детей с особыми образовательными потребностями в общеобразовательной школе","prog_kz":"Жалпы білім беретін мектепте ерекше білім беру қажеттіліктері бар балаларды психологиялық-педагогикалық сүйемелдеу","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":43,"cat_ru":"Воспитатели (старшие воспитатели) специальных организаций образования","cat_kz":"Арнайы ББҰ тәрбиешілері (аға тәрбиешілері)","prog_ru":"Организация учебно-воспитательного и коррекционного процесса в специальных организациях образования","prog_kz":"Арнайы білім беру ұйымдарында оқу-тәрбие және түзету процесін ұйымдастыру","hours":"80","remote":"25 000 ₸","onsite":"101 863 ₸"},{"n":44,"cat_ru":"По запросу организаций образования и выбранным темам","cat_kz":"Білім беру ұйымдарының сұранысы мен таңдау тақырыптары бойынша","prog_ru":"Семинар / вебинар / тренинг","prog_kz":"Семинар / вебинар / тренинг","hours":"1 күн","remote":"4 000 ₸","onsite":"6 000 ₸"},{"n":45,"cat_ru":"Педагоги области","cat_kz":"Облыс педагогтері","prog_ru":"Журнал «Маңғыстау әдіскері» — публикация статьи","prog_kz":"«Маңғыстау әдіскері» журналы — мақала жариялау","hours":"—","remote":"6 700 ₸","onsite":"6 700 ₸"}];
-let visibleCount=10;
-let filteredData=priceData;
-
-function escapeHtml(value){
-    return String(value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[ch]));
-}
-
-function renderRows(){
-    const t=translations[currentLang];
-    const body=document.querySelector("#priceTable tbody");
-    const slice=filteredData.slice(0,visibleCount);
-    body.innerHTML=slice.map(item=>`
-        <tr>
-            <td data-label="№">${item.n}</td>
-            <td data-label="${escapeHtml(t.category)}">${escapeHtml(currentLang==="kz"?item.cat_kz:item.cat_ru)}</td>
-            <td data-label="${escapeHtml(t.program)}">${escapeHtml(currentLang==="kz"?item.prog_kz:item.prog_ru)}</td>
-            <td data-label="${escapeHtml(t.hours)}">${escapeHtml(item.hours)}</td>
-            <td data-label="${escapeHtml(t.remote)}">${escapeHtml(item.remote)}</td>
-            <td data-label="${escapeHtml(t.onsite)}">${escapeHtml(item.onsite)}</td>
-        </tr>`).join("");
-    emptyState.style.display=filteredData.length?"none":"block";
-    loadMoreButton.style.display=visibleCount<filteredData.length?"inline-flex":"none";
-    loadMoreButton.textContent=t.more;
-}
-
-function applySearch(){
-    const q=searchInput.value.trim().toLowerCase();
-    filteredData=priceData.filter(item=>{
-        const text=(item.cat_ru+" "+item.cat_kz+" "+item.prog_ru+" "+item.prog_kz).toLowerCase();
-        return text.includes(q);
-    });
-    visibleCount=10;
-    renderRows();
-}
-
-searchInput.addEventListener("input",applySearch);
-loadMoreButton.addEventListener("click",()=>{visibleCount+=10;renderRows();});
-emptyState.style.display=count?"none":"block"});
-appReady=true;
-renderRows();
+searchInput.addEventListener("input",()=>{const q=searchInput.value.trim().toLowerCase();let count=0;document.querySelectorAll("#priceTable tbody tr").forEach(row=>{const visible=row.textContent.toLowerCase().includes(q);row.style.display=visible?"":"none";if(visible)count++});emptyState.style.display=count?"none":"block"});
 menuToggle.addEventListener("click",()=>mobileMenu.classList.add("open"));menuClose.addEventListener("click",()=>mobileMenu.classList.remove("open"));mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>mobileMenu.classList.remove("open")));
 
-const tourTranslations={
-  ru:{
-    badge:"👋 Знакомство с сайтом",
-    skip:"Пропустить",
-    next:"Далее",
-    finish:"Понятно",
-    steps:[
-      {title:"Добро пожаловать!",text:"Здесь можно найти курсы повышения квалификации и посмотреть актуальную стоимость.",target:null},
-      {title:"Поиск курса",text:"Введите предмет, категорию педагога или название программы — список отфильтруется автоматически.",target:"#searchInput"},
-      {title:"Переключение языка",text:"Нажмите RU или KZ, чтобы перевести всю страницу, включая названия программ.",target:".language-switch"},
-      {title:"Стоимость и связь",text:"Посмотрите дистанционную и аудиторную стоимость. Для уточнения нажмите кнопку WhatsApp.",target:"#waButton"}
-    ]
-  },
-  kz:{
-    badge:"👋 Сайтпен танысу",
-    skip:"Өткізіп жіберу",
-    next:"Келесі",
-    finish:"Түсінікті",
-    steps:[
-      {title:"Қош келдіңіз!",text:"Бұл беттен біліктілікті арттыру курстарын тауып, өзекті бағаларын көре аласыз.",target:null},
-      {title:"Курсты іздеу",text:"Пәнді, педагог санатын немесе бағдарлама атауын енгізіңіз — тізім автоматты түрде сүзгіленеді.",target:"#searchInput"},
-      {title:"Тілді ауыстыру",text:"Бүкіл бетті, соның ішінде бағдарламалар атауларын аудару үшін RU немесе KZ батырмасын басыңыз.",target:".language-switch"},
-      {title:"Баға және байланыс",text:"Қашықтан және аудиториялық оқу бағасын көріңіз. Нақтылау үшін WhatsApp батырмасын басыңыз.",target:"#waButton"}
-    ]
-  }
-};
-
-let tourStep=0;
-let tourTarget=null;
-
-function clearTourHighlight(){
-  if(tourTarget){tourTarget.classList.remove("tour-highlight");tourTarget=null;}
-}
-
-function currentTourLang(){
-  return localStorage.getItem("orleuLanguage")==="kz"?"kz":"ru";
-}
-
-function renderTour(){
-  const lang=currentTourLang();
-  const tr=tourTranslations[lang];
-  const step=tr.steps[tourStep];
-  clearTourHighlight();
-
-  tourBadge.textContent=tr.badge;
-  tourTitle.textContent=step.title;
-  tourText.textContent=step.text;
-  tourSkip.textContent=tr.skip;
-  tourNext.textContent=tourStep===tr.steps.length-1?tr.finish:tr.next;
-
-  tourProgress.innerHTML=tr.steps.map((_,i)=>
-    `<span class="tour-dot ${i<=tourStep?"active":""}"></span>`
-  ).join("");
-
-  if(step.target){
-    const el=document.querySelector(step.target);
-    if(el){
-      tourTarget=el;
-      el.classList.add("tour-highlight");
-      setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"center"}),80);
-    }
-  }
-}
-
-function openTour(){
-  tourStep=0;
-  tourOverlay.classList.add("show");
+const WELCOME_KEY="orleuWelcome2026";
+function openWelcome(){
+  welcomeOverlay.classList.add("show");
   document.body.style.overflow="hidden";
-  renderTour();
 }
-
-function closeTour(markSeen=true){
-  clearTourHighlight();
-  tourOverlay.classList.remove("show");
+function closeWelcome(){
+  welcomeOverlay.classList.remove("show");
   document.body.style.overflow="";
-  if(markSeen)localStorage.setItem("orleuTourSeenV2","1");
+  localStorage.setItem(WELCOME_KEY,"1");
 }
-
-tourNext.addEventListener("click",()=>{
-  const lang=currentTourLang();
-  if(tourStep<tourTranslations[lang].steps.length-1){
-    tourStep++;
-    renderTour();
-  }else{
-    closeTour(true);
-  }
-});
-tourSkip.addEventListener("click",()=>closeTour(true));
-tourHelp.addEventListener("click",openTour);
-tourOverlay.addEventListener("click",e=>{
-  if(e.target===tourOverlay)closeTour(false);
+welcomeStart.addEventListener("click",closeWelcome);
+helpButton.addEventListener("click",openWelcome);
+welcomeOverlay.addEventListener("click",e=>{
+  if(e.target===welcomeOverlay)closeWelcome();
 });
 document.addEventListener("keydown",e=>{
-  if(e.key==="Escape"&&tourOverlay.classList.contains("show"))closeTour(false);
+  if(e.key==="Escape"&&welcomeOverlay.classList.contains("show"))closeWelcome();
 });
-
 setTimeout(()=>{
-  if(!localStorage.getItem("orleuTourSeenV2"))openTour();
-},350);
+  if(!localStorage.getItem(WELCOME_KEY))openWelcome();
+},300);
 
 </script></body></html>
