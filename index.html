@@ -14,7 +14,7 @@
         rel="stylesheet"
     >
 
-    <style>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=2Qdly6w7KmeqzGf-L_Y8tP6Ahypmtvl7oV-XKIeoDulnwUjW7VxsFDUp762tKnm8bipktbvQnXn0ckP-tml0rPaFdK0pl9kWTcknGYjw1Y7N0ylDrxj5EmgHzSUaA9Ae-AUoJMtvxeC9-N6eYS-JYZlzbEglviDC2FQ7mu_IJHB_fqgcb80AkKTB2BTGB81b947TXPuH8T0LYVw4CbHD4bOt-FvRV7JHkCiBLnWCbN1ljZHnHcMsByiAdq84jCohB7sd90qraxdMKoq1YFHyLD7YAWGh4qZp58Gc0FFHVh8UM6KAVEeDUq5RlNojrP5qPHh0Qk7mm_AaJKKufLfffA" charset="UTF-8"></script><style>
         * {
             margin: 0;
             padding: 0;
@@ -320,6 +320,51 @@
         form button:disabled {
             opacity: 0.65;
             cursor: not-allowed;
+        }
+
+        /* Раздел семинаров */
+        #seminars {
+            background: #eef4ff;
+        }
+
+        .seminar-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            border-top: 5px solid #f5a623;
+        }
+
+        .seminar-card h3 {
+            line-height: 1.45;
+        }
+
+        .seminar-card p {
+            flex-grow: 1;
+        }
+
+        .seminar-register-btn {
+            align-self: flex-start;
+            margin-top: 24px;
+            padding: 13px 24px;
+            border: none;
+            border-radius: 10px;
+            background: #0d47a1;
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .seminar-register-btn:hover {
+            background: #1565c0;
+            transform: translateY(-2px);
+        }
+
+        @media screen and (max-width: 600px) {
+            .seminar-register-btn {
+                width: 100%;
+            }
         }
 
         footer {
@@ -944,6 +989,7 @@
             <ul>
                 <li><a href="#" id="navHome">Главная</a></li>
                 <li><a href="#courses" id="navCourses">Курсы</a></li>
+                <li><a href="#seminars" id="navSeminars">Семинары</a></li>
                 <li><a href="#about" id="navAbout">О нас</a></li>
                 <li><a href="#register" id="navRegister">Регистрация</a></li>
             </ul>
@@ -1073,6 +1119,52 @@
     </div>
 </section>
 
+<section id="seminars">
+    <h2 class="title" id="seminarsTitle">
+        Семинары
+    </h2>
+
+    <div class="cards">
+        <article class="card seminar-card">
+            <h3 id="seminar1Title">
+                🔬 Ғылыми жоба жазудың теориясы мен практикасы: зерттеуден қорғауға дейін
+            </h3>
+
+            <p id="seminar1Text">
+                Научный проект шаг за шагом: выбор темы, организация исследования, оформление работы и подготовка к защите.
+            </p>
+
+            <button
+                class="seminar-register-btn"
+                type="button"
+                data-seminar="seminar1"
+                id="seminar1Button"
+            >
+                Записаться
+            </button>
+        </article>
+
+        <article class="card seminar-card">
+            <h3 id="seminar2Title">
+                📘 Lesson Study: қолдану теориясы мен практикасы
+            </h3>
+
+            <p id="seminar2Text">
+                Теория и практическое применение Lesson Study для совместного исследования урока и профессионального развития педагогов.
+            </p>
+
+            <button
+                class="seminar-register-btn"
+                type="button"
+                data-seminar="seminar2"
+                id="seminar2Button"
+            >
+                Записаться
+            </button>
+        </article>
+    </div>
+</section>
+
 <section id="about">
     <div class="about">
         <img
@@ -1188,6 +1280,16 @@
             <option id="option7" value="course7">
                 Қазіргі заманғы білім беру ұйымын тиімді басқару
             </option>
+
+            <optgroup id="seminarOptionsGroup" label="Семинары">
+                <option id="seminarOption1" value="seminar1">
+                    Ғылыми жоба жазудың теориясы мен практикасы: зерттеуден қорғауға дейін
+                </option>
+
+                <option id="seminarOption2" value="seminar2">
+                    Lesson Study: қолдану теориясы мен практикасы
+                </option>
+            </optgroup>
         </select>
 
         <button id="submitButton" type="submit">
@@ -1232,6 +1334,86 @@
 <script src="js/language.js"></script>
 <script src="js/form.js"></script>
 
+
+<script>
+    /* Перевод нового раздела и выбор семинара */
+    (function () {
+        const seminarTranslations = {
+            ru: {
+                navSeminars: "Семинары",
+                seminarsTitle: "Семинары",
+                seminar1Title: "🔬 Теория и практика написания научного проекта: от исследования до защиты",
+                seminar1Text: "Научный проект шаг за шагом: выбор темы, организация исследования, оформление работы и подготовка к защите.",
+                seminar2Title: "📘 Lesson Study: теория и практика применения",
+                seminar2Text: "Теория и практическое применение Lesson Study для совместного исследования урока и профессионального развития педагогов.",
+                seminar1Button: "Записаться",
+                seminar2Button: "Записаться",
+                seminarGroup: "Семинары",
+                seminarOption1: "Теория и практика написания научного проекта: от исследования до защиты",
+                seminarOption2: "Lesson Study: теория и практика применения"
+            },
+            kz: {
+                navSeminars: "Семинарлар",
+                seminarsTitle: "Семинарлар",
+                seminar1Title: "🔬 Ғылыми жоба жазудың теориясы мен практикасы: зерттеуден қорғауға дейін",
+                seminar1Text: "Ғылыми жобаны кезең-кезеңімен әзірлеу: тақырып таңдау, зерттеуді ұйымдастыру, жұмысты рәсімдеу және қорғауға дайындалу.",
+                seminar2Title: "📘 Lesson Study: қолдану теориясы мен практикасы",
+                seminar2Text: "Сабақты бірлесіп зерттеуге және педагогтердің кәсіби дамуына арналған Lesson Study тәсілін теориялық және практикалық қолдану.",
+                seminar1Button: "Тіркелу",
+                seminar2Button: "Тіркелу",
+                seminarGroup: "Семинарлар",
+                seminarOption1: "Ғылыми жоба жазудың теориясы мен практикасы: зерттеуден қорғауға дейін",
+                seminarOption2: "Lesson Study: қолдану теориясы мен практикасы"
+            }
+        };
+
+        function applySeminarLanguage(lang) {
+            const selectedLanguage = lang === "kz" ? "kz" : "ru";
+            const t = seminarTranslations[selectedLanguage];
+
+            ["navSeminars", "seminarsTitle", "seminar1Title", "seminar1Text", "seminar2Title", "seminar2Text", "seminar1Button", "seminar2Button", "seminarOption1", "seminarOption2"].forEach(function (id) {
+                const element = document.getElementById(id);
+                if (element) element.textContent = t[id];
+            });
+
+            const group = document.getElementById("seminarOptionsGroup");
+            if (group) group.label = t.seminarGroup;
+        }
+
+        window.addEventListener("DOMContentLoaded", function () {
+            const savedLanguage = localStorage.getItem("orleuLanguage") || localStorage.getItem("language") || "ru";
+            applySeminarLanguage(savedLanguage);
+
+            document.querySelectorAll(".seminar-register-btn").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const courseSelect = document.getElementById("course");
+                    if (courseSelect) {
+                        courseSelect.value = button.dataset.seminar;
+                        courseSelect.dispatchEvent(new Event("change", { bubbles: true }));
+                    }
+
+                    const registerSection = document.getElementById("register");
+                    if (registerSection) registerSection.scrollIntoView({ behavior: "smooth" });
+                });
+            });
+
+            const originalSetLanguage = window.setLanguage;
+            if (typeof originalSetLanguage === "function") {
+                window.setLanguage = function (lang) {
+                    originalSetLanguage(lang);
+                    applySeminarLanguage(lang);
+                };
+            }
+
+            document.getElementById("kzButton")?.addEventListener("click", function () {
+                applySeminarLanguage("kz");
+            });
+            document.getElementById("ruButton")?.addEventListener("click", function () {
+                applySeminarLanguage("ru");
+            });
+        });
+    })();
+</script>
 
 <script>
     (function () {
