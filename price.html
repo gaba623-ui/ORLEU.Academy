@@ -256,6 +256,10 @@ function closeGuide(mark=true){
   guideBox.classList.remove("show");
   document.body.style.overflow="";
   document.getElementById("mobileMenu").classList.remove("open");
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
   if(mark)localStorage.setItem(GUIDE_KEY,"1");
 }
 guideNext.addEventListener("click",()=>{
