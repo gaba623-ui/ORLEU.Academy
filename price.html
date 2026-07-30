@@ -171,7 +171,7 @@ const guideTranslations={
       {target:"#pdfButton",title:"Открыть PDF",text:"Эта кнопка открывает официальный прайс-лист в формате PDF."},
       {target:"#waButton",title:"Уточнить стоимость",text:"Нажмите сюда, чтобы написать сотруднику института через WhatsApp."},
       {target:"#priceTable",title:"Список программ",text:"Здесь указаны категория слушателей, название программы, количество часов и стоимость."},
-      {target:".language-switch",title:"Переключение языка",text:"Кнопки RU и KZ переводят всю страницу, включая названия программ."}
+      {target:"#mobileMenu",title:"Меню и язык",text:"В этой шторке можно переходить на другие страницы сайта и переключать язык RU/KZ.",openMenu:true}
     ]
   },
   kz:{
@@ -181,7 +181,7 @@ const guideTranslations={
       {target:"#pdfButton",title:"PDF ашу",text:"Бұл батырма ресми прайс-парақты PDF форматында ашады."},
       {target:"#waButton",title:"Бағаны нақтылау",text:"Институт қызметкеріне WhatsApp арқылы жазу үшін осы батырманы басыңыз."},
       {target:"#priceTable",title:"Бағдарламалар тізімі",text:"Мұнда тыңдаушылар санаты, бағдарлама атауы, сағат саны және бағасы көрсетілген."},
-      {target:".language-switch",title:"Тілді ауыстыру",text:"RU және KZ батырмалары бүкіл бетті, соның ішінде бағдарлама атауларын аударады."}
+      {target:"#mobileMenu",title:"Мәзір және тіл",text:"Бұл шторкада сайттың басқа беттеріне өтіп, RU/KZ тілін ауыстыруға болады.",openMenu:true}
     ]
   }
 };
@@ -199,7 +199,7 @@ const guideHelp=document.getElementById("guideHelp");
 
 let guideIndex=0;
 let guideTarget=null;
-const GUIDE_KEY="orleuGuide2026Fixed2";
+const GUIDE_KEY="orleuGuide2026MenuDemo";
 
 function guideLang(){
   return localStorage.getItem("orleuLanguage")==="kz"?"kz":"ru";
@@ -219,6 +219,11 @@ function renderGuide(){
   const tr=guideTranslations[lang];
   const step=tr.steps[guideIndex];
   clearGuideTarget();
+  const mobileMenuEl=document.getElementById("mobileMenu");
+  mobileMenuEl.classList.remove("open");
+  if(step.openMenu){
+    mobileMenuEl.classList.add("open");
+  }
 
   guideStep.textContent=`${tr.step} ${guideIndex+1} / ${tr.steps.length}`;
   guideTitle.textContent=step.title;
@@ -230,8 +235,12 @@ function renderGuide(){
   if(el){
     guideTarget=el;
     el.classList.add("guide-target");
-    el.scrollIntoView({behavior:"smooth",block:"center"});
-    setTimeout(()=>positionGuideArrow(el),350);
+    if(!step.openMenu){
+      el.scrollIntoView({behavior:"smooth",block:"center"});
+      setTimeout(()=>positionGuideArrow(el),350);
+    }else{
+      setTimeout(()=>positionGuideArrow(el),180);
+    }
   }
 }
 function openGuide(){
@@ -246,6 +255,7 @@ function closeGuide(mark=true){
   guideOverlay.classList.remove("show");
   guideBox.classList.remove("show");
   document.body.style.overflow="";
+  document.getElementById("mobileMenu").classList.remove("open");
   if(mark)localStorage.setItem(GUIDE_KEY,"1");
 }
 guideNext.addEventListener("click",()=>{
