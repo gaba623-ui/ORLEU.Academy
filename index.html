@@ -502,6 +502,152 @@
             }
         }
 
+        
+.site-title-sub{font-size:12px;}
+.site-title{max-width:240px;}
+}
+
+        /* Компактная шапка с официальным названием филиала */
+        header {
+            padding: 8px 7%;
+        }
+
+        nav {
+            min-height: 66px;
+            gap: 18px;
+        }
+
+        .site-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+            flex: 1 1 auto;
+        }
+
+        .logo {
+            flex: 0 0 auto;
+        }
+
+        .logo img {
+            height: 56px;
+            width: auto;
+        }
+
+        .site-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 0;
+            max-width: 430px;
+            margin: 0;
+        }
+
+        .site-title-main {
+            color: #0d47a1;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1.15;
+            white-space: nowrap;
+        }
+
+        .site-title-sub {
+            margin-top: 3px;
+            color: #475467;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.25;
+        }
+
+        .nav-panel {
+            flex: 0 0 auto;
+        }
+
+        nav ul {
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            header {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+
+            .site-title {
+                max-width: 330px;
+            }
+
+            .site-title-main {
+                font-size: 15px;
+            }
+
+            .site-title-sub {
+                font-size: 11px;
+            }
+
+            nav ul {
+                gap: 16px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            header {
+                padding: 7px 4%;
+            }
+
+            nav {
+                min-height: 58px;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .site-title {
+                max-width: min(62vw, 390px);
+            }
+
+            .site-title-main {
+                font-size: 14px;
+            }
+
+            .site-title-sub {
+                font-size: 10px;
+                line-height: 1.2;
+            }
+        }
+
+        @media screen and (max-width: 520px) {
+            .site-brand {
+                gap: 8px;
+            }
+
+            .logo img {
+                height: 44px;
+            }
+
+            .site-title {
+                max-width: calc(100vw - 125px);
+            }
+
+            .site-title-main {
+                font-size: 12px;
+                white-space: normal;
+            }
+
+            .site-title-sub {
+                font-size: 9px;
+            }
+        }
+
         footer {
             background: #0d47a1;
             color: white;
@@ -1094,8 +1240,15 @@
 
 <header>
     <nav>
-        <div class="logo">
-            <img src="js/images/Logo 2.png" alt="ORLEU">
+        <div class="site-brand">
+            <div class="logo">
+                <img src="js/images/Logo 2.png" alt="ORLEU">
+            </div>
+
+            <div class="site-title">
+                <div class="site-title-main">«Өрлеу» БАҰО» АҚ</div>
+                <div class="site-title-sub">"Маңғыстау облысы бойынша Кәсіби даму институты" филиалы</div>
+            </div>
         </div>
 
         <button
@@ -1153,6 +1306,7 @@
 
         <div class="menu-overlay" id="menuOverlay"></div>
     </nav>
+
 </header>
 
 <section class="hero">
