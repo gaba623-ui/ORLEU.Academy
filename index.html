@@ -1233,6 +1233,134 @@
             }
         }
 
+
+        /* Пошаговое обучение по сайту */
+        .site-guide-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 4998;
+            display: none;
+            background: rgba(5, 24, 48, .64);
+        }
+
+        .site-guide-overlay.open {
+            display: block;
+        }
+
+        .site-guide-card {
+            position: fixed;
+            left: 14px;
+            right: 14px;
+            bottom: 14px;
+            z-index: 5001;
+            display: none;
+            padding: 20px;
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, .3);
+        }
+
+        .site-guide-card.open {
+            display: block;
+        }
+
+        .site-guide-progress {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #eef4ff;
+            color: #0d47a1;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .site-guide-card h3 {
+            margin-bottom: 8px;
+            color: #102a43;
+            font-size: 21px;
+            line-height: 1.25;
+        }
+
+        .site-guide-card p {
+            margin-bottom: 17px;
+            color: #52606d;
+            font-size: 15px;
+            line-height: 1.55;
+        }
+
+        .site-guide-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .site-guide-button {
+            min-height: 48px;
+            border: 0;
+            border-radius: 11px;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .site-guide-button.secondary {
+            background: #f2f4f7;
+            color: #344054;
+        }
+
+        .site-guide-button.primary {
+            background: #0d47a1;
+            color: #fff;
+        }
+
+        .site-guide-target {
+            position: relative !important;
+            z-index: 5000 !important;
+            outline: 4px solid #f5a623 !important;
+            outline-offset: 5px !important;
+            border-radius: 14px !important;
+            box-shadow: 0 0 0 9999px rgba(5, 24, 48, .08) !important;
+        }
+
+        .site-guide-arrow {
+            position: fixed;
+            z-index: 5002;
+            display: none;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 18px solid #f5a623;
+            filter: drop-shadow(0 3px 3px rgba(0, 0, 0, .18));
+        }
+
+        .site-guide-help {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 2200;
+            width: 50px;
+            height: 50px;
+            border: 0;
+            border-radius: 50%;
+            background: #0d47a1;
+            color: #fff;
+            font-size: 23px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 12px 30px rgba(13, 71, 161, .34);
+        }
+
+        @media screen and (min-width: 760px) {
+            .site-guide-card {
+                left: auto;
+                right: 24px;
+                bottom: 24px;
+                width: 410px;
+            }
+        }
+
     </style>
 </head>
 
@@ -1668,6 +1796,23 @@
     </p>
 </footer>
 
+<div class="site-guide-overlay" id="siteGuideOverlay"></div>
+<div class="site-guide-arrow" id="siteGuideArrow"></div>
+
+<div class="site-guide-card" id="siteGuideCard" role="dialog" aria-modal="true" aria-labelledby="siteGuideTitle">
+    <div class="site-guide-progress" id="siteGuideProgress">Шаг 1 / 6</div>
+    <h3 id="siteGuideTitle">Главная страница</h3>
+    <p id="siteGuideText">Здесь находится основная информация о центре ORLEU.</p>
+
+    <div class="site-guide-actions">
+        <button class="site-guide-button secondary" id="siteGuideSkip" type="button">Пропустить</button>
+        <button class="site-guide-button primary" id="siteGuideNext" type="button">Далее</button>
+    </div>
+</div>
+
+<button class="site-guide-help" id="siteGuideHelp" type="button" aria-label="Показать обучение">?</button>
+
+
 <div class="success-modal" id="successModal" aria-hidden="true">
     <div class="success-modal__overlay" id="successModalOverlay"></div>
 
@@ -1898,6 +2043,238 @@
             if (window.innerWidth > 600) closeMenu();
         });
     })();
+</script>
+
+
+<script>
+(function () {
+    const guideTranslations = {
+        ru: {
+            step: "Шаг",
+            skip: "Пропустить",
+            next: "Далее",
+            finish: "Готово",
+            steps: [
+                {
+                    target: ".hero-content",
+                    title: "Главная страница",
+                    text: "Здесь находится краткая информация о центре ORLEU и кнопка перехода к образовательным программам."
+                },
+                {
+                    target: "#courses",
+                    title: "Образовательные программы",
+                    text: "В этом разделе можно посмотреть основные направления курсов повышения квалификации."
+                },
+                {
+                    target: "#seminars",
+                    title: "Семинары",
+                    text: "Здесь представлены актуальные семинары. Кнопка «Записаться» переносит к форме регистрации."
+                },
+                {
+                    target: "#register",
+                    title: "Онлайн-регистрация",
+                    text: "Заполните имя, фамилию, телефон, e-mail и выберите программу, затем нажмите «Подать заявку»."
+                },
+                {
+                    target: "#contacts",
+                    title: "Контакты",
+                    text: "В этом разделе находятся адрес, телефон, WhatsApp, e-mail, карта и ссылка на 2GIS."
+                },
+                {
+                    target: "#mobileMenu",
+                    title: "Меню и переключение языка",
+                    text: "В этой шторке можно переходить между разделами сайта, открыть прайс-лист и переключить язык RU/KZ.",
+                    openMenu: true
+                }
+            ]
+        },
+        kz: {
+            step: "Қадам",
+            skip: "Өткізіп жіберу",
+            next: "Келесі",
+            finish: "Дайын",
+            steps: [
+                {
+                    target: ".hero-content",
+                    title: "Басты бет",
+                    text: "Мұнда ORLEU орталығы туралы қысқаша ақпарат және білім беру бағдарламаларына өту батырмасы орналасқан."
+                },
+                {
+                    target: "#courses",
+                    title: "Білім беру бағдарламалары",
+                    text: "Бұл бөлімде біліктілікті арттыру курстарының негізгі бағыттарын көруге болады."
+                },
+                {
+                    target: "#seminars",
+                    title: "Семинарлар",
+                    text: "Мұнда өзекті семинарлар көрсетілген. «Тіркелу» батырмасы тіркелу формасына өткізеді."
+                },
+                {
+                    target: "#register",
+                    title: "Онлайн тіркелу",
+                    text: "Атыңызды, тегіңізді, телефонды, e-mail мекенжайын енгізіп, бағдарламаны таңдаңыз да, өтінімді жіберіңіз."
+                },
+                {
+                    target: "#contacts",
+                    title: "Байланыс",
+                    text: "Бұл бөлімде мекенжай, телефон, WhatsApp, e-mail, карта және 2GIS сілтемесі бар."
+                },
+                {
+                    target: "#mobileMenu",
+                    title: "Мәзір және тілді ауыстыру",
+                    text: "Бұл шторка арқылы сайт бөлімдеріне, прайс-параққа өтіп, RU/KZ тілін ауыстыруға болады.",
+                    openMenu: true
+                }
+            ]
+        }
+    };
+
+    const GUIDE_KEY = "orleuIndexGuide2026v1";
+
+    const overlay = document.getElementById("siteGuideOverlay");
+    const card = document.getElementById("siteGuideCard");
+    const arrow = document.getElementById("siteGuideArrow");
+    const progress = document.getElementById("siteGuideProgress");
+    const title = document.getElementById("siteGuideTitle");
+    const text = document.getElementById("siteGuideText");
+    const skip = document.getElementById("siteGuideSkip");
+    const next = document.getElementById("siteGuideNext");
+    const help = document.getElementById("siteGuideHelp");
+
+    let currentStep = 0;
+    let activeTarget = null;
+
+    function currentLanguage() {
+        const saved = localStorage.getItem("orleuLanguage") || localStorage.getItem("language") || "ru";
+        return saved === "kz" ? "kz" : "ru";
+    }
+
+    function closeMobileMenuForGuide() {
+        const menu = document.getElementById("mobileMenu");
+        const menuOverlay = document.getElementById("menuOverlay");
+        const toggle = document.getElementById("menuToggle");
+
+        menu?.classList.remove("open");
+        menuOverlay?.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        toggle?.setAttribute("aria-expanded", "false");
+    }
+
+    function openMobileMenuForGuide() {
+        const menu = document.getElementById("mobileMenu");
+        const menuOverlay = document.getElementById("menuOverlay");
+        const toggle = document.getElementById("menuToggle");
+
+        menu?.classList.add("open");
+        menuOverlay?.classList.add("open");
+        document.body.classList.add("menu-open");
+        toggle?.setAttribute("aria-expanded", "true");
+    }
+
+    function clearTarget() {
+        if (activeTarget) {
+            activeTarget.classList.remove("site-guide-target");
+            activeTarget = null;
+        }
+        arrow.style.display = "none";
+    }
+
+    function placeArrow(element) {
+        const rect = element.getBoundingClientRect();
+        arrow.style.left = Math.max(14, Math.min(window.innerWidth - 38, rect.left + rect.width / 2 - 12)) + "px";
+        arrow.style.top = Math.max(8, rect.bottom + 8) + "px";
+        arrow.style.display = rect.bottom < window.innerHeight - 180 ? "block" : "none";
+    }
+
+    function renderStep() {
+        const lang = currentLanguage();
+        const t = guideTranslations[lang];
+        const step = t.steps[currentStep];
+
+        clearTarget();
+        closeMobileMenuForGuide();
+
+        if (step.openMenu) {
+            openMobileMenuForGuide();
+        }
+
+        progress.textContent = `${t.step} ${currentStep + 1} / ${t.steps.length}`;
+        title.textContent = step.title;
+        text.textContent = step.text;
+        skip.textContent = t.skip;
+        next.textContent = currentStep === t.steps.length - 1 ? t.finish : t.next;
+
+        const element = document.querySelector(step.target);
+        if (!element) return;
+
+        activeTarget = element;
+        element.classList.add("site-guide-target");
+
+        if (!step.openMenu) {
+            element.scrollIntoView({ behavior: "smooth", block: "center" });
+            setTimeout(() => placeArrow(element), 400);
+        } else {
+            setTimeout(() => placeArrow(element), 220);
+        }
+    }
+
+    function openGuide() {
+        currentStep = 0;
+        overlay.classList.add("open");
+        card.classList.add("open");
+        renderStep();
+    }
+
+    function closeGuide(markSeen) {
+        clearTarget();
+        closeMobileMenuForGuide();
+        overlay.classList.remove("open");
+        card.classList.remove("open");
+
+        if (markSeen) {
+            localStorage.setItem(GUIDE_KEY, "1");
+        }
+    }
+
+    next.addEventListener("click", function () {
+        const steps = guideTranslations[currentLanguage()].steps;
+
+        if (currentStep < steps.length - 1) {
+            currentStep += 1;
+            renderStep();
+        } else {
+            closeGuide(true);
+        }
+    });
+
+    skip.addEventListener("click", function () {
+        closeGuide(true);
+    });
+
+    help.addEventListener("click", openGuide);
+
+    overlay.addEventListener("click", function () {
+        closeGuide(false);
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && card.classList.contains("open")) {
+            closeGuide(false);
+        }
+    });
+
+    window.addEventListener("resize", function () {
+        if (activeTarget) placeArrow(activeTarget);
+    });
+
+    window.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function () {
+            if (!localStorage.getItem(GUIDE_KEY)) {
+                openGuide();
+            }
+        }, 650);
+    });
+})();
 </script>
 
 </body>
