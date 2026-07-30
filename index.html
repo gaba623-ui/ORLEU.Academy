@@ -1278,6 +1278,7 @@
                 <li><a href="#" id="navHome">Главная</a></li>
                 <li><a href="#courses" id="navCourses">Курсы</a></li>
                 <li><a href="#seminars" id="navSeminars">Семинары</a></li>
+                <li><a href="price.html" id="navPrice">Прайс-лист</a></li>
                 <li><a href="#about" id="navAbout">О нас</a></li>
                 <li><a href="#register" id="navRegister">Регистрация</a></li>
                 <li><a href="#contacts" id="navContacts">Контакты</a></li>
@@ -1690,6 +1691,22 @@
     </div>
 </div>
     
+
+<script>
+(function () {
+    function updatePriceNav(lang) {
+        const link = document.getElementById("navPrice");
+        if (link) link.textContent = lang === "kz" ? "Прайс-парақ" : "Прайс-лист";
+    }
+    window.addEventListener("DOMContentLoaded", function () {
+        const saved = localStorage.getItem("orleuLanguage") || localStorage.getItem("language") || "ru";
+        updatePriceNav(saved);
+        document.getElementById("kzButton")?.addEventListener("click", () => updatePriceNav("kz"));
+        document.getElementById("ruButton")?.addEventListener("click", () => updatePriceNav("ru"));
+    });
+})();
+</script>
+
 <script src="js/language.js"></script>
 <script src="js/form.js"></script>
 
