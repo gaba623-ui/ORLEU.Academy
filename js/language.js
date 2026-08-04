@@ -8,7 +8,21 @@ const lang = {
         hero:
             "Центр повышения квалификации педагогов Республики Казахстан. Современные образовательные программы для профессионального развития.",
 
-        heroButton: "Наши программы",
+        heroButton: "Посмотреть курсы",
+
+        heroMainTitle: "НОВЫЕ КУРСЫ",
+        heroSecondLine: "Новые направления",
+        heroThirdLine: "Новые возможности",
+        heroYearText: "Новые образовательные программы 2026 года",
+        heroCoursesLabel: "Курсы",
+        heroCoursesPrice: "от 15 000 ₸",
+        heroSeminarsLabel: "Семинары",
+        heroSeminarsPrice: "от 4 000 ₸",
+        heroProgramsLabel: "Возможности",
+        heroProgramsCount: "149 программ",
+        heroOpenPriceText: "Открыть прайс-лист",
+        heroWhatsapp: "Уточнить через WhatsApp",
+        heroPhoneLabel: "Для уточнения свяжитесь с нами",
         coursesTitle: "Образовательные программы",
 
         course1Title:
@@ -108,7 +122,21 @@ const lang = {
         hero:
             "Қазақстан Республикасы педагогтерінің біліктілігін арттыруға арналған заманауи білім беру бағдарламалары.",
 
-        heroButton: "Курстар",
+        heroButton: "Курстарды қарау",
+
+        heroMainTitle: "ЖАҢА КУРСТАР",
+        heroSecondLine: "Жаңа бағыттар",
+        heroThirdLine: "Жаңа мүмкіндіктер",
+        heroYearText: "2026 жылғы жаңа білім беру бағдарламалары",
+        heroCoursesLabel: "Курстар",
+        heroCoursesPrice: "15 000 ₸ бастап",
+        heroSeminarsLabel: "Семинарлар",
+        heroSeminarsPrice: "4 000 ₸ бастап",
+        heroProgramsLabel: "Мүмкіндік",
+        heroProgramsCount: "149 бағдарлама",
+        heroOpenPriceText: "Прайс-парақты ашу",
+        heroWhatsapp: "WhatsApp арқылы нақтылау",
+        heroPhoneLabel: "Нақтылау үшін хабарласыңыз",
         coursesTitle: "Білім беру бағдарламалары",
 
         course1Title:
@@ -234,8 +262,20 @@ function setLanguage(language) {
     setText("navAbout", translation.about);
     setText("navRegister", translation.register);
 
-    setText("heroText", translation.hero);
     setText("heroButton", translation.heroButton);
+    setText("heroMainTitle", translation.heroMainTitle);
+    setText("heroSecondLine", translation.heroSecondLine);
+    setText("heroThirdLine", translation.heroThirdLine);
+    setText("heroYearText", translation.heroYearText);
+    setText("heroCoursesLabel", translation.heroCoursesLabel);
+    setText("heroCoursesPrice", translation.heroCoursesPrice);
+    setText("heroSeminarsLabel", translation.heroSeminarsLabel);
+    setText("heroSeminarsPrice", translation.heroSeminarsPrice);
+    setText("heroProgramsLabel", translation.heroProgramsLabel);
+    setText("heroProgramsCount", translation.heroProgramsCount);
+    setText("heroOpenPriceText", translation.heroOpenPriceText);
+    setText("heroWhatsapp", translation.heroWhatsapp);
+    setText("heroPhoneLabel", translation.heroPhoneLabel);
     setText("coursesTitle", translation.coursesTitle);
 
     setText("course1Title", translation.course1Title);
