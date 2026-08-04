@@ -1,20 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ORLEU</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ORLEU</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -1361,482 +1355,547 @@
             }
         }
 
-    </style>
+    
+.hero-highlights{margin-top:35px}.hero-badge{display:inline-block;background:#f5a623;color:#102a43;font-weight:800;padding:12px 22px;border-radius:999px;font-size:20px;margin-bottom:25px}.hero-prices{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:700px;margin:0 auto 20px}.hero-price-card{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);padding:18px;border-radius:18px;border:1px solid rgba(255,255,255,.25)}.hero-price-card h3{margin:0 0 8px}.hero-price-card p{margin:0;font-size:22px}.hero-contact{font-size:24px;font-weight:700}.hero-contact a{color:#fff;text-decoration:none}@media(max-width:700px){.hero-badge{font-size:16px}.hero-prices{grid-template-columns:1fr}.hero-contact,.hero-price-card p{font-size:18px}}
+
+/* Стильный рекламный блок на главном экране */
+.hero-content{
+    position:relative;
+    z-index:1;
+}
+.hero #heroText{
+    max-width:860px;
+    font-size:clamp(24px,3vw,40px);
+    line-height:1.18;
+    font-weight:800;
+    letter-spacing:-.02em;
+    text-wrap:balance;
+}
+.hero-offer{
+    width:min(930px,100%);
+    margin:34px auto 0;
+    padding:22px;
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:26px;
+    background:linear-gradient(145deg,rgba(255,255,255,.17),rgba(255,255,255,.08));
+    box-shadow:0 28px 70px rgba(4,33,75,.28);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+}
+.hero-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    margin-bottom:18px;
+    padding:8px 13px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:999px;
+    background:rgba(4,33,75,.2);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.03em;
+}
+.hero-eyebrow-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#f5a623;
+    box-shadow:0 0 0 5px rgba(245,166,35,.16);
+}
+.hero-offer-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:13px;
+}
+.hero-offer-card{
+    min-height:104px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:18px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:18px;
+    background:rgba(255,255,255,.12);
+    text-align:left;
+    transition:transform .25s ease,background .25s ease;
+}
+.hero-offer-card:hover{
+    transform:translateY(-4px);
+    background:rgba(255,255,255,.19);
+}
+.hero-offer-card--accent{
+    background:linear-gradient(135deg,rgba(245,166,35,.28),rgba(245,166,35,.12));
+}
+.hero-offer-icon{
+    flex:0 0 48px;
+    width:48px;
+    height:48px;
+    display:grid;
+    place-items:center;
+    border-radius:14px;
+    background:rgba(255,255,255,.9);
+    font-size:24px;
+    box-shadow:0 10px 20px rgba(4,33,75,.16);
+}
+.hero-offer-label{
+    display:block;
+    margin-bottom:3px;
+    color:rgba(255,255,255,.76);
+    font-size:13px;
+    font-weight:600;
+}
+.hero-offer-card strong{
+    display:block;
+    color:#fff;
+    font-size:19px;
+    line-height:1.25;
+}
+.hero-offer-actions{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:18px;
+}
+.hero-offer-link{
+    min-height:50px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:13px 21px;
+    border-radius:13px;
+    font-weight:800;
+    text-decoration:none;
+    transition:transform .22s ease,box-shadow .22s ease;
+}
+.hero-offer-link:hover{
+    transform:translateY(-3px);
+}
+.hero-offer-link--primary{
+    background:#fff;
+    color:#0d47a1;
+    box-shadow:0 10px 25px rgba(4,33,75,.18);
+}
+.hero-offer-link--secondary{
+    border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.09);
+    color:#fff;
+}
+.hero-phone{
+    width:max-content;
+    max-width:100%;
+    display:flex;
+    align-items:center;
+    gap:11px;
+    margin:18px auto 0;
+    color:#fff;
+    text-decoration:none;
+}
+.hero-phone-icon{
+    width:40px;
+    height:40px;
+    display:grid;
+    place-items:center;
+    border-radius:12px;
+    background:#25d366;
+    font-size:20px;
+    box-shadow:0 9px 20px rgba(37,211,102,.25);
+}
+.hero-phone small,
+.hero-phone strong{
+    display:block;
+    text-align:left;
+}
+.hero-phone small{
+    color:rgba(255,255,255,.74);
+    font-size:12px;
+}
+.hero-phone strong{
+    font-size:18px;
+    letter-spacing:.02em;
+}
+@media(max-width:760px){
+    .hero-offer{
+        padding:15px;
+        border-radius:20px;
+    }
+    .hero-offer-grid{
+        grid-template-columns:1fr;
+    }
+    .hero-offer-card{
+        min-height:auto;
+        padding:14px;
+    }
+    .hero-offer-actions{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+    .hero-offer-link{
+        width:100%;
+    }
+}
+@media(max-width:420px){
+    .hero #heroText{
+        font-size:25px;
+    }
+    .hero-eyebrow{
+        font-size:11px;
+    }
+    .hero-offer-card strong{
+        font-size:17px;
+    }
+}
+</style>
 </head>
-
 <body>
-
 <header>
-    <nav>
-        <div class="site-brand">
-            <div class="logo">
-                <img src="js/images/Logo 2.png" alt="ORLEU">
-            </div>
-
-            <div class="site-title">
-                <div class="site-title-main">«Өрлеу» БАҰО» АҚ</div>
-                <div class="site-title-sub">"Маңғыстау облысы бойынша Кәсіби даму институты" филиалы</div>
-            </div>
-        </div>
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Открыть меню"
-            aria-expanded="false"
-            aria-controls="mobileMenu"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <div class="nav-panel" id="mobileMenu">
-            <button
-                class="menu-close"
-                id="menuClose"
-                type="button"
-                aria-label="Закрыть меню"
-            >
+<nav>
+<div class="site-brand">
+<div class="logo">
+<img alt="ORLEU" src="js/images/Logo 2.png"/>
+</div>
+<div class="site-title">
+<div class="site-title-main">«Өрлеу» БАҰО» АҚ</div>
+<div class="site-title-sub">"Маңғыстау облысы бойынша Кәсіби даму институты" филиалы</div>
+</div>
+</div>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Открыть меню" class="menu-toggle" id="menuToggle" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<div class="nav-panel" id="mobileMenu">
+<button aria-label="Закрыть меню" class="menu-close" id="menuClose" type="button">
                 ×
             </button>
-
-            <ul>
-                <li><a href="#" id="navHome">Главная</a></li>
-                <li><a href="#courses" id="navCourses">Курсы</a></li>
-                <li><a href="#seminars" id="navSeminars">Семинары</a></li>
-                <li><a href="price.html" id="navPrice">Прайс-лист</a></li>
-                <li><a href="#about" id="navAbout">О нас</a></li>
-                <li><a href="#register" id="navRegister">Регистрация</a></li>
-                <li><a href="#contacts" id="navContacts">Контакты</a></li>
-            </ul>
-
-            <div class="language-switch">
-                <button
-                    type="button"
-                    class="lang-btn"
-                    id="kzButton"
-                    onclick="setLanguage('kz')"
-                >
+<ul>
+<li><a href="#" id="navHome">Главная</a></li>
+<li><a href="#courses" id="navCourses">Курсы</a></li>
+<li><a href="#seminars" id="navSeminars">Семинары</a></li>
+<li><a href="price.html" id="navPrice">Прайс-лист</a></li>
+<li><a href="#about" id="navAbout">О нас</a></li>
+<li><a href="#register" id="navRegister">Регистрация</a></li>
+<li><a href="#contacts" id="navContacts">Контакты</a></li>
+</ul>
+<div class="language-switch">
+<button class="lang-btn" id="kzButton" onclick="setLanguage('kz')" type="button">
                     🇰🇿 KZ
                 </button>
-
-                <button
-                    type="button"
-                    class="lang-btn"
-                    id="ruButton"
-                    onclick="setLanguage('ru')"
-                >
+<button class="lang-btn" id="ruButton" onclick="setLanguage('ru')" type="button">
                     🇷🇺 RU
                 </button>
-            </div>
-        </div>
-
-        <div class="menu-overlay" id="menuOverlay"></div>
-    </nav>
-
+</div>
+</div>
+<div class="menu-overlay" id="menuOverlay"></div>
+</nav>
 </header>
-
 <section class="hero">
-    <div class="hero-content">
-        <img
-            id="heroLogo"
-            src="js/images/Logo03.png"
-            alt="ORLEU"
-        >
+<div class="hero-content">
+<img alt="ORLEU" id="heroLogo" src="js/images/Logo03.png"/>
+<p id="heroText">Жаңа курстар. Жаңа бағыттар. Жаңа мүмкіндіктер.</p>
+<a class="btn" href="price.html" id="heroButton">Курстарды қарау</a>
 
-        <p id="heroText">
-            Центр повышения квалификации педагогов Республики Казахстан.
-        </p>
-
-        <a
-            href="#courses"
-            id="heroButton"
-            class="btn"
-        >
-            Наши программы
-        </a>
-    </div>
+<div aria-label="Курстар мен семинарлар туралы ақпарат" class="hero-offer">
+<div class="hero-eyebrow">
+<span class="hero-eyebrow-dot"></span>
+    2026 жылғы жаңа білім беру бағдарламалары
+  </div>
+<div class="hero-offer-grid">
+<article class="hero-offer-card">
+<div class="hero-offer-icon">📚</div>
+<div>
+<span class="hero-offer-label">Курстар</span>
+<strong>15 000 ₸ бастап</strong>
+</div>
+</article>
+<article class="hero-offer-card">
+<div class="hero-offer-icon">🎓</div>
+<div>
+<span class="hero-offer-label">Семинарлар</span>
+<strong>4 000 ₸ бастап</strong>
+</div>
+</article>
+<article class="hero-offer-card hero-offer-card--accent">
+<div class="hero-offer-icon">✨</div>
+<div>
+<span class="hero-offer-label">Мүмкіндік</span>
+<strong>149 бағдарлама</strong>
+</div>
+</article>
+</div>
+<div class="hero-offer-actions">
+<a class="hero-offer-link hero-offer-link--primary" href="price.html">
+      Прайс-парақты ашу
+      <span aria-hidden="true">→</span>
+</a>
+<a class="hero-offer-link hero-offer-link--secondary" href="https://wa.me/77012541822?text=%D0%A1%D3%99%D0%BB%D0%B5%D0%BC%D0%B5%D1%82%D1%81%D1%96%D0%B7%20ORLEU%20%D0%BA%D1%83%D1%80%D1%81%D1%82%D0%B0%D1%80%D1%8B%20%D1%82%D1%83%D1%80%D0%B0%D0%BB%D1%8B%20%D0%BD%D0%B0%D2%9B%D1%82%D1%8B%D0%BB%D0%B0%D2%93%D1%8B%D0%BC%20%D0%BA%D0%B5%D0%BB%D0%B5%D0%B4%D1%96." rel="noopener" target="_blank">
+      WhatsApp арқылы нақтылау
+    </a>
+</div>
+<a class="hero-phone" href="tel:+77012541822">
+<span class="hero-phone-icon">☎</span>
+<span>
+<small>Нақтылау үшін хабарласыңыз</small>
+<strong>+7 701 254 18 22</strong>
+</span>
+</a>
+</div></div>
 </section>
-
 <section id="courses">
-    <h2 class="title" id="coursesTitle">
+<h2 class="title" id="coursesTitle">
         Образовательные программы
     </h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3 id="course1Title">
+<div class="cards">
+<div class="card">
+<h3 id="course1Title">
                 🏫 Мектепке дейінгі ұйымның заттық кеңістіктік даму ортасын ұйымдастыру
             </h3>
-
-            <p id="course1Text">
+<p id="course1Text">
                 Организация современной предметно-развивающей среды в дошкольной организации.
             </p>
-        </div>
-
-        <div class="card">
-            <h3 id="course2Title">
+</div>
+<div class="card">
+<h3 id="course2Title">
                 👶 Ерекше білім беру қажеттіліктері бар балалармен жұмысты ұйымдастыру
             </h3>
-
-            <p id="course2Text">
+<p id="course2Text">
                 Практические методы работы с детьми с особыми образовательными потребностями.
             </p>
-        </div>
-
-        <div class="card">
-            <h3 id="course3Title">
+</div>
+<div class="card">
+<h3 id="course3Title">
                 📚 Инклюзивті білім беру
             </h3>
-
-            <p id="course3Text">
+<p id="course3Text">
                 Формирование базовых компетенций педагогов инклюзивного образования.
             </p>
-        </div>
-
-        <div class="card">
-            <h3 id="course4Title">
+</div>
+<div class="card">
+<h3 id="course4Title">
                 🔬 Зерттеушілік және жобалық іс-әрекеті
             </h3>
-
-            <p id="course4Text">
+<p id="course4Text">
                 Развитие исследовательской и проектной деятельности учащихся начальной школы.
             </p>
-        </div>
-
-        <div class="card">
-            <h3 id="course5Title">
+</div>
+<div class="card">
+<h3 id="course5Title">
                 🌍 Жаһандық құзыреттер
             </h3>
-
-            <p id="course5Text">
+<p id="course5Text">
                 Развитие глобальных компетенций и навыков XXI века.
             </p>
-        </div>
-
-        <div class="card">
-            <h3 id="course6Title">
+</div>
+<div class="card">
+<h3 id="course6Title">
                 🇬🇧 Ағылшын тілін оқытудағы инновациялық технологиялар
             </h3>
-
-            <p id="course6Text">
+<p id="course6Text">
                 Современные технологии преподавания английского языка.
             </p>
-        </div>
-
-        <div class="card">
-            <h3 id="course7Title">
+</div>
+<div class="card">
+<h3 id="course7Title">
                 🎓 Қазіргі заманғы білім беру ұйымын тиімді басқару
             </h3>
-
-            <p id="course7Text">
+<p id="course7Text">
                 Современные подходы к управлению образовательными организациями.
             </p>
-        </div>
-    </div>
+</div>
+</div>
 </section>
-
 <section id="seminars">
-    <h2 class="title" id="seminarsTitle">
+<h2 class="title" id="seminarsTitle">
         Семинары
     </h2>
-
-    <div class="cards">
-        <article class="card seminar-card">
-            <h3 id="seminar1Title">
+<div class="cards">
+<article class="card seminar-card">
+<h3 id="seminar1Title">
                 🔬 Ғылыми жоба жазудың теориясы мен практикасы: зерттеуден қорғауға дейін
             </h3>
-
-            <p id="seminar1Text">
+<p id="seminar1Text">
                 Научный проект шаг за шагом: выбор темы, организация исследования, оформление работы и подготовка к защите.
             </p>
-
-            <button
-                class="seminar-register-btn"
-                type="button"
-                data-seminar="seminar1"
-                id="seminar1Button"
-            >
+<button class="seminar-register-btn" data-seminar="seminar1" id="seminar1Button" type="button">
                 Записаться
             </button>
-        </article>
-
-        <article class="card seminar-card">
-            <h3 id="seminar2Title">
+</article>
+<article class="card seminar-card">
+<h3 id="seminar2Title">
                 📘 Lesson Study: қолдану теориясы мен практикасы
             </h3>
-
-            <p id="seminar2Text">
+<p id="seminar2Text">
                 Теория и практическое применение Lesson Study для совместного исследования урока и профессионального развития педагогов.
             </p>
-
-            <button
-                class="seminar-register-btn"
-                type="button"
-                data-seminar="seminar2"
-                id="seminar2Button"
-            >
+<button class="seminar-register-btn" data-seminar="seminar2" id="seminar2Button" type="button">
                 Записаться
             </button>
-        </article>
-    </div>
+</article>
+</div>
 </section>
-
 <section id="about">
-    <div class="about">
-        <img
-            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80"
-            alt="Обучение педагогов"
-        >
-
-        <div>
-            <h2 id="aboutTitle">
+<div class="about">
+<img alt="Обучение педагогов" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div>
+<h2 id="aboutTitle">
                 О центре ORLEU
             </h2>
-
-            <p id="aboutText">
+<p id="aboutText">
                 ORLEU — образовательная платформа повышения квалификации
                 педагогических работников. Мы предлагаем современные программы
                 обучения, направленные на развитие профессиональных
                 компетенций, внедрение инновационных образовательных
                 технологий и повышение качества образования.
             </p>
-
-            <div class="features">
-                <div class="feature">
-                    <h3>📚</h3>
-                    <p id="feature1">Курсы и семинары по различным направлениям</p>
-                </div>
-
-                <div class="feature">
-                    <h3>👩‍🏫</h3>
-                    <p id="feature2">Опытные преподаватели</p>
-                </div>
-
-                <div class="feature">
-                    <h3>🎓</h3>
-                    <p id="feature3">Сертификаты</p>
-                </div>
-
-                <div class="feature">
-                    <h3>💻</h3>
-                    <p id="feature4">Онлайн обучение</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="features">
+<div class="feature">
+<h3>📚</h3>
+<p id="feature1">Курсы и семинары по различным направлениям</p>
+</div>
+<div class="feature">
+<h3>👩‍🏫</h3>
+<p id="feature2">Опытные преподаватели</p>
+</div>
+<div class="feature">
+<h3>🎓</h3>
+<p id="feature3">Сертификаты</p>
+</div>
+<div class="feature">
+<h3>💻</h3>
+<p id="feature4">Онлайн обучение</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <section id="register">
-    <h2 class="title" id="registerTitle">
+<h2 class="title" id="registerTitle">
         Запись на обучение
     </h2>
-
-    <form id="registerForm">
-        <input
-            id="firstName"
-            type="text"
-            placeholder="Имя"
-            autocomplete="given-name"
-            required
-        >
-
-        <input
-            id="lastName"
-            type="text"
-            placeholder="Фамилия"
-            autocomplete="family-name"
-            required
-        >
-
-        <input
-            id="phone"
-            type="tel"
-            placeholder="Телефон"
-            autocomplete="tel"
-            required
-        >
-
-        <input
-            id="email"
-            type="email"
-            placeholder="Email"
-            autocomplete="email"
-            required
-        >
-
-        <select id="course" required>
-            <option id="selectDefault" value="">
+<form id="registerForm">
+<input autocomplete="given-name" id="firstName" placeholder="Имя" required="" type="text"/>
+<input autocomplete="family-name" id="lastName" placeholder="Фамилия" required="" type="text"/>
+<input autocomplete="tel" id="phone" placeholder="Телефон" required="" type="tel"/>
+<input autocomplete="email" id="email" placeholder="Email" required="" type="email"/>
+<select id="course" required="">
+<option id="selectDefault" value="">
                 Выберите программу
             </option>
-
-            <option id="option1" value="course1">
+<option id="option1" value="course1">
                 Мектепке дейінгі ұйымның заттық кеңістіктік даму ортасын ұйымдастыру
             </option>
-
-            <option id="option2" value="course2">
+<option id="option2" value="course2">
                 Ерекше білім беру қажеттіліктері бар балалармен жұмысты ұйымдастыру
             </option>
-
-            <option id="option3" value="course3">
+<option id="option3" value="course3">
                 Инклюзивті білім беру
             </option>
-
-            <option id="option4" value="course4">
+<option id="option4" value="course4">
                 Зерттеушілік және жобалық іс-әрекеті
             </option>
-
-            <option id="option5" value="course5">
+<option id="option5" value="course5">
                 Жаһандық құзыреттер
             </option>
-
-            <option id="option6" value="course6">
+<option id="option6" value="course6">
                 Ағылшын тілін оқытудағы инновациялық технологиялар
             </option>
-
-            <option id="option7" value="course7">
+<option id="option7" value="course7">
                 Қазіргі заманғы білім беру ұйымын тиімді басқару
             </option>
-
-            <optgroup id="seminarOptionsGroup" label="Семинары">
-                <option id="seminarOption1" value="seminar1">
+<optgroup id="seminarOptionsGroup" label="Семинары">
+<option id="seminarOption1" value="seminar1">
                     Ғылыми жоба жазудың теориясы мен практикасы: зерттеуден қорғауға дейін
                 </option>
-
-                <option id="seminarOption2" value="seminar2">
+<option id="seminarOption2" value="seminar2">
                     Lesson Study: қолдану теориясы мен практикасы
                 </option>
-            </optgroup>
-        </select>
-
-        <button id="submitButton" type="submit">
+</optgroup>
+</select>
+<button id="submitButton" type="submit">
             Подать заявку
         </button>
-    </form>
+</form>
 </section>
-
-
 <section id="contacts">
-    <h2 class="title" id="contactsTitle">Контакты</h2>
-
-    <div class="contacts-grid">
-        <div class="contact-info">
-            <div class="contact-item">
-                <div class="contact-icon">📍</div>
-                <div>
-                    <h3 id="officeTitle">Наш офис</h3>
-                    <p id="officeAddress">
+<h2 class="title" id="contactsTitle">Контакты</h2>
+<div class="contacts-grid">
+<div class="contact-info">
+<div class="contact-item">
+<div class="contact-icon">📍</div>
+<div>
+<h3 id="officeTitle">Наш офис</h3>
+<p id="officeAddress">
                         г. Актау, БЦ «Ажар», 17-й микрорайон, 48, 5 этаж
                     </p>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-icon">📱</div>
-                <div>
-                    <h3 id="phoneTitle">Телефон и WhatsApp</h3>
-                    <a href="tel:+77012541822">+7 701 254 18 22</a>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-icon">✉️</div>
-                <div>
-                    <h3 id="emailTitle">E-mail</h3>
-                    <a href="mailto:mangystau_ipr@orleu.edu.kz">mangystau_ipr@orleu.edu.kz</a>
-                </div>
-            </div>
-
-            <div class="contact-actions">
-                <a
-                    class="contact-button whatsapp"
-                    id="whatsappButton"
-                    href="https://wa.me/77012541822?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%20%D0%BA%D1%83%D1%80%D1%81%D0%B0%D1%85%20ORLEU."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">📱</div>
+<div>
+<h3 id="phoneTitle">Телефон и WhatsApp</h3>
+<a href="tel:+77012541822">+7 701 254 18 22</a>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">✉️</div>
+<div>
+<h3 id="emailTitle">E-mail</h3>
+<a href="mailto:mangystau_ipr@orleu.edu.kz">mangystau_ipr@orleu.edu.kz</a>
+</div>
+</div>
+<div class="contact-actions">
+<a class="contact-button whatsapp" href="https://wa.me/77012541822?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%20%D0%BA%D1%83%D1%80%D1%81%D0%B0%D1%85%20ORLEU." id="whatsappButton" rel="noopener noreferrer" target="_blank">
                     💬 Написать в WhatsApp
                 </a>
-
-                <a
-                    class="contact-button map-link"
-                    id="twoGisButton"
-                    href="https://go.2gis.com/2mdOM"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+<a class="contact-button map-link" href="https://go.2gis.com/2mdOM" id="twoGisButton" rel="noopener noreferrer" target="_blank">
                     🗺️ Открыть в 2GIS
                 </a>
-            </div>
-        </div>
-
-        <div class="map-wrapper">
-            <iframe
-                title="Google Maps — БЦ Ажар"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d606.7136711866369!2d51.14376133120336!3d43.66828644905229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1785396943448!5m2!1sru!2skz"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            <div class="map-fallback" id="mapFallback">
+</div>
+</div>
+<div class="map-wrapper">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d606.7136711866369!2d51.14376133120336!3d43.66828644905229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1785396943448!5m2!1sru!2skz" title="Google Maps — БЦ Ажар"></iframe>
+<div class="map-fallback" id="mapFallback">
                 Если карта не загрузилась, нажмите кнопку «Открыть в 2GIS».
             </div>
-        </div>
-    </div>
+</div>
+</div>
 </section>
-
 <footer>
-    <h2>ORLEU</h2>
-
-    <br>
-
-    <p id="footerText">
+<h2>ORLEU</h2>
+<br/>
+<p id="footerText">
         © 2026 ORLEU. Все права защищены.
     </p>
 </footer>
-
 <div class="site-guide-overlay" id="siteGuideOverlay"></div>
 <div class="site-guide-arrow" id="siteGuideArrow"></div>
-
-<div class="site-guide-card" id="siteGuideCard" role="dialog" aria-modal="true" aria-labelledby="siteGuideTitle">
-    <div class="site-guide-progress" id="siteGuideProgress">Шаг 1 / 6</div>
-    <h3 id="siteGuideTitle">Главная страница</h3>
-    <p id="siteGuideText">Здесь находится основная информация о центре ORLEU.</p>
-
-    <div class="site-guide-actions">
-        <button class="site-guide-button secondary" id="siteGuideSkip" type="button">Пропустить</button>
-        <button class="site-guide-button primary" id="siteGuideNext" type="button">Далее</button>
-    </div>
+<div aria-labelledby="siteGuideTitle" aria-modal="true" class="site-guide-card" id="siteGuideCard" role="dialog">
+<div class="site-guide-progress" id="siteGuideProgress">Шаг 1 / 6</div>
+<h3 id="siteGuideTitle">Главная страница</h3>
+<p id="siteGuideText">Здесь находится основная информация о центре ORLEU.</p>
+<div class="site-guide-actions">
+<button class="site-guide-button secondary" id="siteGuideSkip" type="button">Пропустить</button>
+<button class="site-guide-button primary" id="siteGuideNext" type="button">Далее</button>
 </div>
-
-<button class="site-guide-help" id="siteGuideHelp" type="button" aria-label="Показать обучение">?</button>
-
-
-<div class="success-modal" id="successModal" aria-hidden="true">
-    <div class="success-modal__overlay" id="successModalOverlay"></div>
-
-    <div class="success-modal__content" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
-        <div class="success-modal__icon">✓</div>
-
-        <h2 id="successModalTitle">
+</div>
+<button aria-label="Показать обучение" class="site-guide-help" id="siteGuideHelp" type="button">?</button>
+<div aria-hidden="true" class="success-modal" id="successModal">
+<div class="success-modal__overlay" id="successModalOverlay"></div>
+<div aria-labelledby="successModalTitle" aria-modal="true" class="success-modal__content" role="dialog">
+<div class="success-modal__icon">✓</div>
+<h2 id="successModalTitle">
             Заявка успешно отправлена!
         </h2>
-
-        <p id="successModalText">
+<p id="successModalText">
             Спасибо за регистрацию. Мы свяжемся с вами в ближайшее время.
         </p>
-
-        <button
-            id="successModalClose"
-            class="success-modal__button"
-            type="button">
+<button class="success-modal__button" id="successModalClose" type="button">
             Закрыть
         </button>
-    </div>
 </div>
-    
-
+</div>
 <script>
 (function () {
     function updatePriceNav(lang) {
@@ -1851,11 +1910,8 @@
     });
 })();
 </script>
-
 <script src="js/language.js"></script>
 <script src="js/form.js"></script>
-
-
 <script>
     /* Перевод нового раздела и выбор семинара */
     (function () {
@@ -1935,8 +1991,6 @@
         });
     })();
 </script>
-
-
 <script>
     /* Перевод раздела контактов */
     (function () {
@@ -2001,7 +2055,6 @@
         });
     })();
 </script>
-
 <script>
     (function () {
         const menuToggle = document.getElementById("menuToggle");
@@ -2044,8 +2097,6 @@
         });
     })();
 </script>
-
-
 <script>
 (function () {
     const guideTranslations = {
@@ -2281,6 +2332,5 @@
     });
 })();
 </script>
-
 </body>
 </html>
