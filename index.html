@@ -1547,6 +1547,10 @@
         font-size:17px;
     }
 }
+
+.hero-main{font-size:clamp(38px,5vw,64px);font-weight:900;letter-spacing:-0.03em;margin-bottom:12px;text-transform:uppercase}
+.hero-line{font-size:clamp(26px,3vw,42px);font-weight:800;line-height:1.15}
+
 </style>
 </head>
 <body>
@@ -1594,7 +1598,11 @@
 <section class="hero">
 <div class="hero-content">
 <img alt="ORLEU" id="heroLogo" src="js/images/Logo03.png"/>
-<p id="heroText">Жаңа курстар. Жаңа бағыттар. Жаңа мүмкіндіктер.</p>
+<div id="heroText">
+<div class="hero-line hero-main">ЖАҢА КУРСТАР</div>
+<div class="hero-line">Жаңа бағыттар</div>
+<div class="hero-line">Жаңа мүмкіндіктер</div>
+</div>
 <a class="btn" href="price.html" id="heroButton">Курстарды қарау</a>
 
 <div aria-label="Курстар мен семинарлар туралы ақпарат" class="hero-offer">
