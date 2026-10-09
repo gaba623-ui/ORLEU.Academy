@@ -128,7 +128,7 @@ const lang = {
         heroThirdLine: "Жаңа мүмкіндіктер",
         heroYearText: "2026 жылғы жаңа білім беру бағдарламалары",
         heroCoursesLabel: "Курстар",
-        heroCoursesPrice: "15 000 ₸ бастап",
+        heroCoursesPrice: "10 000 ₸ бастап",
         heroSeminarsLabel: "Семинарлар",
         heroSeminarsPrice: "4 000 ₸ бастап",
         heroProgramsLabel: "Мүмкіндік",
