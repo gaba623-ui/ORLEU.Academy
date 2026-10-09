@@ -15,7 +15,7 @@ const lang = {
         heroThirdLine: "Новые возможности",
         heroYearText: "Новые образовательные программы 2026 года",
         heroCoursesLabel: "Курсы",
-        heroCoursesPrice: "от 15 000 ₸",
+        heroCoursesPrice: "от 10 000 ₸",
         heroSeminarsLabel: "Семинары",
         heroSeminarsPrice: "от 4 000 ₸",
         heroProgramsLabel: "Возможности",
